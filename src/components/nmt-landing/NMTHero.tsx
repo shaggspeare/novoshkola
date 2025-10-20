@@ -30,7 +30,7 @@ const NMTHero = () => {
                         Групові та індивідуальні заняття з живими викладачами онлайн
                      </p>
                      <div className="banner__btn-wrap" data-aos="fade-right" data-aos-delay="800">
-                        <a href="#contact" className="btn arrow-btn">
+                        <a href="#contact" className="btn arrow-btn" style={{textTransform: 'none'}}>
                            Записатися на безкоштовний урок <BtnArrow />
                         </a>
                      </div>
