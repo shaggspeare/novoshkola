@@ -1,6 +1,7 @@
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { Link } from "react-router-dom"
 import UseSticky from "../../hooks/UseSticky"
+import NMTMobileSidebar from "./menu/NMTMobileSidebar"
 
 const NMTHeader = () => {
    const { sticky } = UseSticky();
@@ -10,31 +11,8 @@ const NMTHeader = () => {
       const element = document.getElementById(sectionId);
       if (element) {
          element.scrollIntoView({ behavior: 'smooth' });
-         setIsMobileMenuOpen(false);
       }
    };
-
-   // Close mobile menu when clicking outside
-   useEffect(() => {
-      const handleClickOutside = (event: MouseEvent) => {
-         const target = event.target as HTMLElement;
-         if (isMobileMenuOpen && !target.closest('.mobile-menu') && !target.closest('.mobile-nav-toggler')) {
-            setIsMobileMenuOpen(false);
-         }
-      };
-
-      if (isMobileMenuOpen) {
-         // Use a timeout to avoid conflicts with the toggle click
-         const timer = setTimeout(() => {
-            document.addEventListener('click', handleClickOutside);
-         }, 100);
-
-         return () => {
-            clearTimeout(timer);
-            document.removeEventListener('click', handleClickOutside);
-         };
-      }
-   }, [isMobileMenuOpen]);
 
    return (
       <>
@@ -102,76 +80,26 @@ const NMTHeader = () => {
                               </div>
 
                               {/* Mobile Menu Toggle */}
-                              <div
-                                 onClick={() => {
-                                    console.log('Toggler clicked!', isMobileMenuOpen);
-                                    setIsMobileMenuOpen(prev => !prev);
-                                 }}
-                                 className="mobile-nav-toggler d-xl-none"
-                              >
-                                 <i className="tg-flaticon-menu-1"></i>
-                              </div>
+                              {!isMobileMenuOpen && (
+                                 <div
+                                    onClick={() => setIsMobileMenuOpen(true)}
+                                    className="mobile-nav-toggler d-xl-none"
+                                 >
+                                    <i className="tg-flaticon-menu-1"></i>
+                                 </div>
+                              )}
                            </nav>
                         </div>
-
-                        {/* Mobile Menu */}
-                        {isMobileMenuOpen && (
-                           <div className="mobile-menu d-xl-none" style={{
-                              position: "absolute",
-                              top: "100%",
-                              left: 0,
-                              right: 0,
-                              background: "#fff",
-                              boxShadow: "0 5px 20px rgba(0,0,0,0.1)",
-                              zIndex: 998,
-                              padding: "20px",
-                              maxHeight: "80vh",
-                              overflowY: "auto"
-                           }}>
-                              <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-                                 <li style={{ marginBottom: "15px" }}>
-                                    <a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }} style={{ fontSize: "16px", color: "#1e1e1e" }}>
-                                       Про курс
-                                    </a>
-                                 </li>
-                                 <li style={{ marginBottom: "15px" }}>
-                                    <a href="#program" onClick={(e) => { e.preventDefault(); scrollToSection('program'); }} style={{ fontSize: "16px", color: "#1e1e1e" }}>
-                                       Програма
-                                    </a>
-                                 </li>
-                                 <li style={{ marginBottom: "15px" }}>
-                                    <a href="#teachers" onClick={(e) => { e.preventDefault(); scrollToSection('teachers'); }} style={{ fontSize: "16px", color: "#1e1e1e" }}>
-                                       Викладачі
-                                    </a>
-                                 </li>
-                                 <li style={{ marginBottom: "15px" }}>
-                                    <a href="#prices" onClick={(e) => { e.preventDefault(); scrollToSection('prices'); }} style={{ fontSize: "16px", color: "#1e1e1e" }}>
-                                       Ціни
-                                    </a>
-                                 </li>
-                                 <li style={{ marginBottom: "15px" }}>
-                                    <a href="#reviews" onClick={(e) => { e.preventDefault(); scrollToSection('reviews'); }} style={{ fontSize: "16px", color: "#1e1e1e" }}>
-                                       Відгуки
-                                    </a>
-                                 </li>
-                                 <li style={{ marginBottom: "15px" }}>
-                                    <a href="#faq" onClick={(e) => { e.preventDefault(); scrollToSection('faq'); }} style={{ fontSize: "16px", color: "#1e1e1e" }}>
-                                       FAQ
-                                    </a>
-                                 </li>
-                                 <li style={{ marginTop: "20px", paddingTop: "20px", borderTop: "1px solid #e8e8e8" }}>
-                                    <a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }} className="btn arrow-btn" style={{ display: "block", textAlign: "center" }}>
-                                       Записатися
-                                    </a>
-                                 </li>
-                              </ul>
-                           </div>
-                        )}
                      </div>
                   </div>
                </div>
             </div>
          </header>
+         <NMTMobileSidebar
+            isActive={isMobileMenuOpen}
+            setIsActive={setIsMobileMenuOpen}
+            scrollToSection={scrollToSection}
+         />
       </>
    )
 }
