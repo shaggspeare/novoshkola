@@ -56,7 +56,7 @@ const NMTPrograms = () => {
                     </li>
                   </ul>
 
-                  <div className="courses__item-bottom" style={{ marginTop: "auto" }}>
+                  <div className="courses__item-bottom" style={{ marginTop: "auto", paddingTop: "20px" }}>
                     <div className="button">
                       <a href="#contact">
                         <span className="text">Обрати програму</span>

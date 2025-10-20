@@ -20,7 +20,7 @@ const NMTHowItWorks = () => {
                   <div key={step.id} className="col-lg-4 col-md-6 mb-30">
                      <div className="about__info-list-item" style={{
                         background: "#f9f9f9",
-                        padding: "30px 25px",
+                        padding: "20px 15px",
                         borderRadius: "8px",
                         height: "100%",
                         border: "1px solid #e8e8e8",
@@ -29,26 +29,26 @@ const NMTHowItWorks = () => {
                      }}>
                         <div className="step-number" style={{
                            position: "absolute",
-                           top: "20px",
-                           right: "20px",
-                           width: "50px",
-                           height: "50px",
+                           top: "15px",
+                           right: "15px",
+                           width: "40px",
+                           height: "40px",
                            borderRadius: "50%",
                            background: "linear-gradient(135deg, #5866eb 0%, #4755d6 100%)",
                            color: "#fff",
                            display: "flex",
                            alignItems: "center",
                            justifyContent: "center",
-                           fontSize: "20px",
+                           fontSize: "18px",
                            fontWeight: "700"
                         }}>
                            {step.step}
                         </div>
-                        <div style={{ paddingRight: "60px" }}>
-                           <h4 className="title" style={{ fontSize: "18px", marginBottom: "15px", color: "#1e1e1e" }}>
+                        <div style={{ paddingRight: "50px" }}>
+                           <h4 className="title" style={{ fontSize: "clamp(16px, 4vw, 18px)", marginBottom: "12px", color: "#1e1e1e" }}>
                               {step.title}
                            </h4>
-                           <p style={{ fontSize: "14px", lineHeight: "1.6", color: "#666", margin: 0 }}>
+                           <p style={{ fontSize: "clamp(13px, 3.5vw, 14px)", lineHeight: "1.6", color: "#666", margin: 0 }}>
                               {step.description}
                            </p>
                         </div>

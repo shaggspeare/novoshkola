@@ -8,14 +8,14 @@ const NMTContact = () => {
                <div className="col-xl-8 col-lg-10">
                   <div className="section__title text-center">
                      <span className="sub-title">Зв'яжіться з нами</span>
-                     <h2 className="title" style={{ textTransform: "none" }}>Готові розпочати підготовку?</h2>
-                     <p>Залиште свої контактні дані, і ми зв'яжемося з вами найближчим часом</p>
+                     <h2 className="title" style={{ textTransform: "none", fontSize: "clamp(24px, 6vw, 48px)" }}>Готові розпочати підготовку?</h2>
+                     <p style={{ fontSize: "clamp(14px, 3.5vw, 16px)" }}>Залиште свої контактні дані, і ми зв'яжемося з вами найближчим часом</p>
                   </div>
                </div>
             </div>
 
             <div className="row">
-               <div className="col-lg-4">
+               <div className="col-lg-4 mb-4 mb-lg-0">
                   <div className="contact-info-wrap">
                      <ul className="list-wrap">
                         <li>

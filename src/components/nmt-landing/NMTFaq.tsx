@@ -15,8 +15,8 @@ const NMTFaq = () => {
                <div className="col-xl-8">
                   <div className="section__title text-center mb-50">
                      <span className="sub-title">Часті питання</span>
-                     <h2 className="title bold" style={{ textTransform: "none" }}>Відповіді на найпопулярніші питання</h2>
-                     <p>Зібрали найважливіше, що цікавить наших майбутніх учнів та їхніх батьків</p>
+                     <h2 className="title bold" style={{ textTransform: "none", fontSize: "clamp(24px, 6vw, 48px)" }}>Відповіді на найпопулярніші питання</h2>
+                     <p style={{ fontSize: "clamp(14px, 3.5vw, 16px)" }}>Зібрали найважливіше, що цікавить наших майбутніх учнів та їхніх батьків</p>
                   </div>
                </div>
             </div>

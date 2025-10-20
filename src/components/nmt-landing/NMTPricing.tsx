@@ -39,9 +39,9 @@ const NMTPricing = () => {
                            </div>
                         )}
 
-                        <div className="courses__item-content" style={{ paddingTop: "40px" }}>
+                        <div className="courses__item-content" style={{ paddingTop: "40px", paddingLeft: "15px", paddingRight: "15px" }}>
                            <div className="text-center mb-30">
-                              <h3 className="title" style={{ fontSize: "24px", marginBottom: "15px" }}>
+                              <h3 className="title" style={{ fontSize: "clamp(20px, 5vw, 24px)", marginBottom: "15px" }}>
                                  {pricing.title}
                               </h3>
                               <div style={{ marginBottom: "10px" }}>

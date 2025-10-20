@@ -35,7 +35,7 @@ const NMTHero = () => {
                         </a>
                      </div>
                      <p data-aos="fade-right" data-aos-delay="1000" style={{ marginTop: "20px", fontSize: "14px", opacity: 0.8 }}>
-                        * Можлива оплатити частинами
+                        * Можлива оплата частинами
                      </p>
                   </div>
                </div>
