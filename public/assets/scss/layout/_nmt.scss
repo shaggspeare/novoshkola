@@ -1,0 +1,371 @@
+@use '../utils' as *;
+
+/*=============================
+    NMT Landing Custom Styles
+===============================*/
+
+// ===========================
+// NMT HEADER FIXES - CLEAN START
+// ===========================
+
+// Disable sticky header animation
+.sticky-menu {
+    -webkit-animation: none !important;
+    animation: none !important;
+}
+
+// Mobile menu toggle button - override ALL conflicting styles
+.mobile-nav-toggler {
+    // Force display and positioning
+    @media (max-width: 1199.98px) {
+        display: flex !important;
+        position: relative !important;
+        z-index: 10000 !important;
+
+        // Make it clickable
+        pointer-events: auto !important;
+        cursor: pointer !important;
+        touch-action: manipulation !important;
+
+        // Size and spacing
+        min-width: 50px !important;
+        min-height: 50px !important;
+        padding: 10px !important;
+        margin: 0 !important;
+
+        // Alignment
+        align-items: center !important;
+        justify-content: center !important;
+
+        // Prevent selection
+        -webkit-user-select: none !important;
+        user-select: none !important;
+
+        // Visual
+        font-size: 28px !important;
+        line-height: 1 !important;
+        color: var(--tg-theme-primary) !important;
+        background: transparent !important;
+        border: none !important;
+
+        // Feedback
+        &:active {
+            opacity: 0.7 !important;
+            transform: scale(0.95) !important;
+        }
+
+        // Icon inside shouldn't interfere
+        i, svg, * {
+            pointer-events: none !important;
+        }
+    }
+}
+
+// Ensure banner doesn't overlap header
+.banner-area {
+    position: relative;
+    z-index: 1;
+}
+
+// Fix for NMT hero highlight text visibility on mobile
+.nmt-hero-highlight {
+    @media #{$xs} {
+        // Ensure text is visible on mobile
+        display: inline-block !important;
+
+        // Adjust SVG positioning for mobile
+        & > svg {
+            position: absolute;
+            left: 0;
+            top: 50% !important;
+            transform: translateY(-50%);
+            width: 100%;
+            height: auto !important;
+            min-height: 35px;
+            z-index: -1;
+            color: var(--tg-theme-secondary);
+        }
+
+        // Better text contrast and spacing on mobile
+        color: var(--tg-common-color-white) !important;
+        padding: 8px 15px !important;
+        line-height: 1.2;
+        font-size: 26px !important;
+
+        // Ensure text doesn't wrap awkwardly
+        white-space: nowrap;
+    }
+
+    @media #{$sm} {
+        & > svg {
+            top: 50% !important;
+            transform: translateY(-50%);
+        }
+        padding: 8px 15px !important;
+        font-size: 32px !important;
+    }
+}
+
+// General mobile improvements for NMT hero section
+.banner__content {
+    @media #{$xs} {
+        .title {
+            // Better line height for Ukrainian text
+            line-height: 1.4 !important;
+
+            // Ensure proper spacing between lines
+            & br {
+                display: block;
+                content: "";
+                margin-bottom: 8px;
+            }
+        }
+    }
+}
+
+// NMT Pricing mobile improvements
+.courses__item {
+    @media #{$xs} {
+        // Ensure pricing cards are readable on mobile
+        .courses__item-content {
+            padding: 25px 15px !important;
+
+            h3.title {
+                font-size: 20px !important;
+                line-height: 1.3;
+            }
+
+            // Price display
+            & > div {
+                span:first-child {
+                    font-size: 16px !important;
+                }
+            }
+        }
+    }
+}
+
+// NMT Features - make all icons white and same size
+.features__icon-two {
+    width: 70px !important;
+    height: 70px !important;
+    flex: 0 0 auto;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 50%;
+
+    // Force all SVG icons to be white and same size
+    svg, img {
+        width: 40px !important;
+        height: 40px !important;
+        max-width: 40px !important;
+        max-height: 40px !important;
+        color: #fff !important;
+        fill: #fff !important;
+
+        // Target all paths and elements inside SVG
+        *, path, g, circle, rect, polygon {
+            color: #fff !important;
+            fill: #fff !important;
+            stroke: #fff !important;
+        }
+    }
+
+    // For icon fonts
+    i {
+        font-size: 40px !important;
+        color: #fff !important;
+    }
+}
+
+// NMT Features mobile improvements
+.features__item-two {
+    @media #{$xs} {
+        padding: 20px 15px;
+
+        .features__content-two {
+            .content-top {
+                margin-bottom: 15px;
+
+                h2.title {
+                    font-size: 18px !important;
+                    line-height: 1.3;
+                    margin-top: 10px;
+                }
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        }
+    }
+}
+
+// NMT Programs mobile improvements
+.courses__item {
+    @media #{$xs} {
+        h5.title {
+            font-size: 18px !important;
+            line-height: 1.4;
+
+            a {
+                font-size: inherit;
+            }
+        }
+
+        .about__info-list-item {
+            padding: 8px 0;
+
+            p.content {
+                font-size: 14px;
+                line-height: 1.5;
+            }
+        }
+    }
+}
+
+// NMT How It Works mobile improvements
+.about__info-list-item {
+    @media #{$xs} {
+        .step-number {
+            width: 35px !important;
+            height: 35px !important;
+            font-size: 16px !important;
+            top: 12px !important;
+            right: 12px !important;
+        }
+    }
+}
+
+// NMT Contact form mobile improvements
+.contact-form-wrap {
+    @media #{$xs} {
+        h4.title {
+            font-size: 20px !important;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .form-grp {
+            margin-bottom: 15px;
+
+            input,
+            select,
+            textarea {
+                font-size: 14px;
+                padding: 12px 15px;
+            }
+        }
+
+        button.btn {
+            width: 100%;
+            justify-content: center;
+            padding: 15px 20px;
+        }
+    }
+}
+
+// Contact info mobile improvements
+.contact-info-wrap {
+    @media #{$xs} {
+        ul.list-wrap {
+            li {
+                padding: 15px;
+                margin-bottom: 15px;
+
+                .content {
+                    h4.title {
+                        font-size: 16px;
+                        margin-bottom: 8px;
+                    }
+
+                    a, p {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Section title mobile improvements
+.section__title {
+    @media #{$xs} {
+        .sub-title {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        h2.title {
+            margin-bottom: 15px;
+        }
+
+        p, .desc {
+            font-size: 14px !important;
+            line-height: 1.6;
+        }
+    }
+}
+
+// FAQ mobile improvements
+.faq__wrap {
+    @media #{$xs} {
+        .accordion-item {
+            margin-bottom: 15px;
+
+            .accordion-button {
+                font-size: 15px;
+                line-height: 1.4;
+                padding: 15px;
+            }
+
+            .accordion-body {
+                padding: 15px;
+
+                p {
+                    font-size: 14px;
+                    line-height: 1.6;
+                }
+            }
+        }
+    }
+}
+
+// Mobile button improvements
+@media #{$xs} {
+    .btn.arrow-btn {
+        padding: 12px 20px;
+        font-size: 14px;
+        white-space: normal;
+        text-align: center;
+        line-height: 1.4;
+    }
+
+    .banner__btn-wrap {
+        margin-top: 25px !important;
+    }
+
+    // Fix for course/program selection buttons
+    .courses__item-bottom {
+        .button a {
+            font-size: 14px !important;
+            padding: 12px 20px;
+            line-height: 1.4;
+
+            .text {
+                font-size: 14px !important;
+            }
+
+            i {
+                font-size: 12px;
+            }
+        }
+    }
+}

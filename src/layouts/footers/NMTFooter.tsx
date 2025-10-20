@@ -71,7 +71,7 @@ const NMTFooter = () => {
                <div className="row align-items-center">
                   <div className="col-md-7">
                      <div className="copy-right-text">
-                        <p>© 2024 Новошкола. Всі права захищені.</p>
+                        <p>© 2025 Новошкола. Всі права захищені.</p>
                      </div>
                   </div>
                   <div className="col-md-5">

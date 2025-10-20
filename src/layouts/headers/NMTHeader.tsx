@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import UseSticky from "../../hooks/UseSticky"
 
@@ -13,6 +13,28 @@ const NMTHeader = () => {
          setIsMobileMenuOpen(false);
       }
    };
+
+   // Close mobile menu when clicking outside
+   useEffect(() => {
+      const handleClickOutside = (event: MouseEvent) => {
+         const target = event.target as HTMLElement;
+         if (isMobileMenuOpen && !target.closest('.mobile-menu') && !target.closest('.mobile-nav-toggler')) {
+            setIsMobileMenuOpen(false);
+         }
+      };
+
+      if (isMobileMenuOpen) {
+         // Use a timeout to avoid conflicts with the toggle click
+         const timer = setTimeout(() => {
+            document.addEventListener('click', handleClickOutside);
+         }, 100);
+
+         return () => {
+            clearTimeout(timer);
+            document.removeEventListener('click', handleClickOutside);
+         };
+      }
+   }, [isMobileMenuOpen]);
 
    return (
       <>
@@ -80,7 +102,13 @@ const NMTHeader = () => {
                               </div>
 
                               {/* Mobile Menu Toggle */}
-                              <div onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="mobile-nav-toggler d-xl-none">
+                              <div
+                                 onClick={() => {
+                                    console.log('Toggler clicked!', isMobileMenuOpen);
+                                    setIsMobileMenuOpen(prev => !prev);
+                                 }}
+                                 className="mobile-nav-toggler d-xl-none"
+                              >
                                  <i className="tg-flaticon-menu-1"></i>
                               </div>
                            </nav>
@@ -95,8 +123,10 @@ const NMTHeader = () => {
                               right: 0,
                               background: "#fff",
                               boxShadow: "0 5px 20px rgba(0,0,0,0.1)",
-                              zIndex: 999,
-                              padding: "20px"
+                              zIndex: 998,
+                              padding: "20px",
+                              maxHeight: "80vh",
+                              overflowY: "auto"
                            }}>
                               <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
                                  <li style={{ marginBottom: "15px" }}>
