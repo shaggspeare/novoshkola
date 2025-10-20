@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run dev)",
+      "Bash(curl -s http://localhost:5174/nmt)",
+      "Bash(curl -s http://localhost:5174/)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

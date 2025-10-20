@@ -48,6 +48,7 @@ import StudentAttempt from '../pages/StudentAttempt';
 import StudentHistory from '../pages/StudentHistory';
 import StudentSetting from '../pages/StudentSetting';
 import NotFound from '../pages/NotFound';
+import NMTLanding from '../pages/NMTLanding';
 
 const AppNavigation = () => {
   return (
@@ -101,6 +102,7 @@ const AppNavigation = () => {
         <Route path="/student-attempts" element={<StudentAttempt />} />
         <Route path="/student-history" element={<StudentHistory />} />
         <Route path="/student-setting" element={<StudentSetting />} />
+        <Route path="/nmt" element={<NMTLanding />} />
         {/* <Route path="/blog-details/:id" element={<DynamicBlogDeatils />} /> */}
         <Route path="*" element={<NotFound />} />
       </Routes>
