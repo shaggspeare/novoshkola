@@ -1,4 +1,46 @@
-// Placeholder Testimonials component - to be updated when reviews are available
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Autoplay } from 'swiper/modules';
+import nmt_testimonial_data from '../../data/nmt-data/NMTTestimonialData';
+
+const setting = {
+   slidesPerView: 1,
+   spaceBetween: 30,
+   observer: true,
+   observeParents: true,
+   loop: true,
+   autoplay: {
+      delay: 7000,
+      disableOnInteraction: false,
+   },
+   breakpoints: {
+      '1500': {
+         slidesPerView: 1,
+      },
+      '1200': {
+         slidesPerView: 1,
+      },
+      '992': {
+         slidesPerView: 1,
+         spaceBetween: 24,
+      },
+      '768': {
+         slidesPerView: 1,
+         spaceBetween: 24,
+      },
+      '576': {
+         slidesPerView: 1,
+         spaceBetween: 20,
+      },
+      '0': {
+         slidesPerView: 1,
+         spaceBetween: 15,
+      },
+   },
+   pagination: {
+      el: '.testimonial-pagination',
+      clickable: true,
+   },
+}
 
 const NMTTestimonials = () => {
    return (
@@ -8,26 +50,35 @@ const NMTTestimonials = () => {
                <div className="col-xl-6 col-lg-8">
                   <div className="section__title text-center mb-50">
                      <span className="sub-title">Відгуки</span>
-                     <h2 className="title">Що говорять наші учні та їхні батьки</h2>
+                     <h2 className="title">Що говорять наші учні</h2>
                      <p>Реальні історії успіху наших випускників</p>
                   </div>
                </div>
             </div>
 
-            {/* Placeholder content - will be replaced with actual testimonials */}
             <div className="row justify-content-center">
                <div className="col-lg-10">
-                  <div className="text-center p-5" style={{
-                     background: "#f9f9f9",
-                     borderRadius: "8px",
-                     border: "1px dashed #e8e8e8"
-                  }}>
-                     <i className="flaticon-quote" style={{ fontSize: "48px", color: "#5866eb", marginBottom: "20px" }}></i>
-                     <h4 style={{ marginBottom: "15px" }}>Розділ в розробці</h4>
-                     <p style={{ color: "#666", marginBottom: 0 }}>
-                        Відгуки учнів та батьків будуть додані найближчим часом
-                     </p>
-                  </div>
+                  <Swiper {...setting} modules={[Pagination, Autoplay]} className="swiper-container testimonial-active-four">
+                     {nmt_testimonial_data.map((item) => (
+                        <SwiperSlide key={item.id} className="swiper-slide">
+                           <div className="testimonial__item-four">
+                              <div className="rating">
+                                 <i className="fas fa-star"></i>
+                                 <i className="fas fa-star"></i>
+                                 <i className="fas fa-star"></i>
+                                 <i className="fas fa-star"></i>
+                                 <i className="fas fa-star"></i>
+                              </div>
+                              <p>{item.desc}</p>
+                              <div className="testimonial__bottom-two">
+                                 <h4 className="title">{item.title}</h4>
+                                 <span>{item.designation}</span>
+                              </div>
+                           </div>
+                        </SwiperSlide>
+                     ))}
+                     <div className="testimonial-pagination testimonial-pagination-two"></div>
+                  </Swiper>
                </div>
             </div>
          </div>
