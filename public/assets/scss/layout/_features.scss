@@ -523,7 +523,7 @@
                 margin-bottom: 8px;
                 font-size: 20px;
                 font-weight: 600;
-                text-transform: capitalize;
+                text-transform: inherit;
             }
             & p {
                 margin-bottom: 0;
@@ -547,13 +547,13 @@
                 color: var(--tg-common-color-white);
                 margin-bottom: 10px;
                 font-size: 20px;
-                text-transform: capitalize;
+                text-transform: inherit;
             }
             & p {
                 margin-bottom: 20px;
                 color: var(--tg-common-color-white);
                 font-weight: 400;
-                text-transform: capitalize;
+                text-transform: inherit;
                 line-height: 1.5;
             }
             & .btn {
@@ -570,7 +570,7 @@
                 margin-bottom: 6px;
                 font-size: 18px;
                 font-weight: 600;
-                text-transform: capitalize;
+                text-transform: inherit;
             }
             & span {
                 display: block;

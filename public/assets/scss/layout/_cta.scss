@@ -159,7 +159,7 @@
         & .title {
             margin-bottom: 12px;
             color: var(--tg-common-color-white);
-            text-transform: capitalize;
+            text-transform: inherit;
             font-size: 60px;
             font-weight: 700;
             @media #{$lg} {
@@ -180,7 +180,7 @@
             font-size: 24px;
             font-weight: 400;
             color: var(--tg-common-color-white);
-            text-transform: capitalize;
+            text-transform: inherit;
             font-family: var(--tg-heading-font-family);
             line-height: 1.2;
             @media #{$md} {
@@ -215,7 +215,7 @@
                 margin-bottom: 0;
                 color: var(--tg-common-color-white);
                 font-weight: 400;
-                text-transform: capitalize;
+                text-transform: inherit;
                 font-size: 36px;
                 @media #{$lg} {
                     font-size: 30px;
@@ -250,14 +250,14 @@
                     margin-bottom: 0;
                     color: var(--tg-common-color-white);
                     font-size: 28px;
-                    text-transform: capitalize;
+                    text-transform: inherit;
                     font-weight: 600;
                 }
                 & p {
                     margin-bottom: 0;
                     color: var(--tg-common-color-white);
                     font-weight: 500;
-                    text-transform: capitalize;
+                    text-transform: inherit;
                 }
             }
             & .btn {

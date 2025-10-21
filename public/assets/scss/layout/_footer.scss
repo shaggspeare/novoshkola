@@ -213,7 +213,7 @@
                 font-weight: 600;
                 color: var(--tg-heading-color);
                 background: var(--tg-theme-secondary);
-                text-transform: capitalize;
+                text-transform: inherit;
                 @include border-radius(0 6px 6px 0);
                 display: block;
                 position: absolute;

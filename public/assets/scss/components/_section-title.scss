@@ -19,7 +19,7 @@
         line-height: 1.33;
         margin: 0 0;
         letter-spacing: -0.75px;
-        text-transform: capitalize;
+        text-transform: inherit;
         @media #{$xs} {
             font-size: 29px;
         }

@@ -56,7 +56,7 @@
                 margin-bottom: 0;
                 font-size: 48px;
                 font-weight: 700;
-                text-transform: capitalize;
+                text-transform: inherit;
                 width: 90%;
                 @media #{$lg} {
                     font-size: 40px;
@@ -195,13 +195,13 @@
                     margin-bottom: 8px;
                     font-size: 18px;
                     font-weight: 600;
-                    text-transform: capitalize;
+                    text-transform: inherit;
                 }
                 & span {
                     display: block;
                     font-family: var(--tg-heading-font-family);
                     color: var(--tg-body-color);
-                    text-transform: capitalize;
+                    text-transform: inherit;
                     line-height: 1.3;
                 }
             }

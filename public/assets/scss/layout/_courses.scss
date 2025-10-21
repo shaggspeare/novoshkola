@@ -192,7 +192,7 @@
                     color: var(--tg-heading-color);
                     font-weight: 500;
                     font-size: 16px;
-                    text-transform: capitalize;
+                    text-transform: inherit;
                     border-radius: 6px;
                     line-height: 1;
                     &.active {
@@ -620,7 +620,7 @@
                     margin-bottom: 8px;
                     font-size: 20px;
                     font-weight: 600;
-                    text-transform: capitalize;
+                    text-transform: inherit;
                     & a {
                         display: inline;
                         background-image: linear-gradient(var(--tg-heading-color), var(--tg-heading-color)), linear-gradient(var(--tg-heading-color), var(--tg-heading-color));
@@ -650,7 +650,7 @@
                     margin-bottom: 18px;
                     font-weight: 600;
                     font-size: 20px;
-                    text-transform: capitalize;
+                    text-transform: inherit;
                     & a {
                         display: inline;
                         background-image: linear-gradient(var(--tg-heading-color), var(--tg-heading-color)), linear-gradient(var(--tg-heading-color), var(--tg-heading-color));
@@ -707,7 +707,7 @@
                     & .title {
                         margin-bottom: 0;
                         font-size: 22px;
-                        text-transform: capitalize;
+                        text-transform: inherit;
                         & a {
                             &:hover {
                                 color: var(--tg-theme-primary);
@@ -723,7 +723,7 @@
                 }
                 & > span {
                     font-size: 15px;
-                    text-transform: capitalize;
+                    text-transform: inherit;
                     font-weight: 400;
                     display: block;
                     color: var(--tg-body-color);
@@ -771,7 +771,7 @@
                     margin-bottom: 15px;
                     font-size: 20px;
                     font-weight: 600;
-                    text-transform: capitalize;
+                    text-transform: inherit;
                     & a {
                         display: inline;
                         background-image: linear-gradient(var(--tg-heading-color), var(--tg-heading-color)), linear-gradient(var(--tg-heading-color), var(--tg-heading-color));
@@ -797,7 +797,7 @@
                 & .title {
                     margin-bottom: 20px;
                     font-size: 20px;
-                    text-transform: capitalize;
+                    text-transform: inherit;
                     & a {
                         display: inline;
                         background-image: linear-gradient(var(--tg-heading-color), var(--tg-heading-color)), linear-gradient(var(--tg-heading-color), var(--tg-heading-color));
@@ -844,7 +844,7 @@
                     color: var(--tg-heading-color);
                     font-weight: 500;
                     font-size: 14px;
-                    text-transform: capitalize;
+                    text-transform: inherit;
                     @include flexbox();
                     align-items: center;
                     line-height: 1;
@@ -1249,7 +1249,7 @@
                 font-size: 16px;
                 font-family: var(--tg-heading-font-family);
                 color: var(--tg-common-color-dark);
-                text-transform: capitalize;
+                text-transform: inherit;
                 @media #{$xs} {
                     margin-bottom: 15px;
                     text-align: center;
@@ -1280,7 +1280,7 @@
                     color: var(--tg-common-color-dark);
                     font-weight: 500;
                     font-size: 15px;
-                    text-transform: capitalize;
+                    text-transform: inherit;
                     border-radius: 4px;
                     outline: none;
                     padding: 10px 32px 10px 15px;

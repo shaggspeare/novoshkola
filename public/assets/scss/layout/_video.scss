@@ -48,7 +48,7 @@
             color: var(--tg-common-color-white);
             font-size: 48px;
             font-weight: 700;
-            text-transform: capitalize;
+            text-transform: inherit;
             margin-bottom: 15px;
             @media #{$xl} {
                 font-size: 45px;
@@ -63,7 +63,7 @@
         & p {
             margin-bottom: 30px;
             color: var(--tg-common-color-white);
-            text-transform: capitalize;
+            text-transform: inherit;
         }
     }
     &__play-btn {

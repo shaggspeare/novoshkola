@@ -99,7 +99,7 @@
                     font-size: 16px;
                     color: var(--tg-body-color);
                     opacity: .8;
-                    text-transform: capitalize;
+                    text-transform: inherit;
                 }
                 &:focus {
                     border-color: var(--tg-theme-primary);

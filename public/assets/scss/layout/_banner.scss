@@ -277,7 +277,7 @@
                 font-size: 60px;
                 font-weight: 600;
                 letter-spacing: -.8px;
-                text-transform: capitalize;
+                text-transform: inherit;
                 @media #{$xl} {
                     font-size: 54px;
                 }
@@ -362,7 +362,7 @@
                 margin-bottom: 8px;
                 font-size: 60px;
                 font-weight: 700;
-                text-transform: capitalize;
+                text-transform: inherit;
                 color: var(--tg-common-color-black-2);
                 position: relative;
                 display: inline-block;
@@ -396,7 +396,7 @@
                 display: block;
                 font-size: 18px;
                 font-weight: 500;
-                text-transform: capitalize;
+                text-transform: inherit;
                 color: var(--tg-common-color-black-2);
                 line-height: 1;
                 margin-bottom: 30px;
@@ -407,7 +407,7 @@
             & p {
                 margin-bottom: 35px;
                 font-size: 18px;
-                text-transform: capitalize;
+                text-transform: inherit;
                 width: 90%;
                 @media #{$xl} {
                     width: 100%;
@@ -437,7 +437,7 @@
                 margin-bottom: 15px;
                 font-size: 60px;
                 font-weight: 700;
-                text-transform: capitalize;
+                text-transform: inherit;
                 letter-spacing: -1.5px;
                 @media #{$xl} {
                     font-size: 54px;
@@ -492,7 +492,7 @@
                 font-size: 50px;
                 font-weight: 700;
                 width: 95%;
-                text-transform: capitalize;
+                text-transform: inherit;
                 @media #{$xl} {
                     width: 100%;
                 }
@@ -527,7 +527,7 @@
                 font-size: 18px;
                 font-family: var(--tg-heading-font-family);
                 font-weight: 500;
-                text-transform: capitalize;
+                text-transform: inherit;
                 color: var(--tg-heading-color);
                 line-height: 1.2;
                 margin-bottom: 30px;
@@ -565,7 +565,7 @@
             & .title {
                 font-size: 50px;
                 font-weight: 700;
-                text-transform: capitalize;
+                text-transform: inherit;
                 margin-bottom: 15px;
                 line-height: 1.1;
                 @media #{$lg} {
@@ -1268,7 +1268,7 @@
             line-height: 1;
             font-weight: 500;
             font-size: 14px;
-            text-transform: capitalize;
+            text-transform: inherit;
             color: var(--tg-common-color-white);
         }
     }
@@ -1400,7 +1400,7 @@
             text-align: left;
             font-weight: 700;
             font-size: 22px;
-            text-transform: capitalize;
+            text-transform: inherit;
             line-height: 1;
             & span {
                 display: block;

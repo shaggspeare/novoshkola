@@ -525,7 +525,7 @@
             & .title {
                 margin-bottom: 32px;
                 font-size: 18px;
-                text-transform: capitalize;
+                text-transform: inherit;
                 font-weight: 600;
                 color: var(--tg-theme-primary);
             }

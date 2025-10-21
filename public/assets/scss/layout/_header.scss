@@ -368,7 +368,7 @@
                 & a {
                     font-size: 16px;
                     font-weight: var(--tg-fw-medium);
-                    text-transform: capitalize;
+                    text-transform: inherit;
                     color: var(--tg-heading-color);
                     font-family: var(--tg-heading-font-family);
                     padding: 37px 10px;
@@ -415,7 +415,7 @@
                             line-height: 1.4;
                             display: block;
                             color: var(--tg-heading-color);
-                            text-transform: capitalize;
+                            text-transform: inherit;
                             font-size: 15px;
                         }
                         &:hover > a,

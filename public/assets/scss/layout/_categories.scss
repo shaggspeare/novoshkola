@@ -193,7 +193,7 @@
                     display: block;
                     font-weight: 600;
                     font-size: 20px;
-                    text-transform: capitalize;
+                    text-transform: inherit;
                     color: var(--tg-heading-color);
                     line-height: 1.2;
                     font-family: var(--tg-heading-font-family);
@@ -239,7 +239,7 @@
                     font-size: 16px;
                     font-family: var(--tg-heading-font-family);
                     color: var(--tg-heading-color);
-                    text-transform: capitalize;
+                    text-transform: inherit;
                     display: block;
                     line-height: 1;
                     padding: 14px 19px;
