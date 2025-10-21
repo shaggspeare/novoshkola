@@ -10,8 +10,8 @@ const NMTTeacherDetails = () => {
 
   useEffect(() => {
     // Scroll to top when component mounts
-    window.scrollTo(0, 0);
-  }, []);
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, [teacherSlug]);
 
   if (!teacher) {
     return (
@@ -140,11 +140,32 @@ const NMTTeacherDetails = () => {
                   }}>
                     <h4 className="mb-20">Готові розпочати навчання з {teacher.name.split(' ')[0]}?</h4>
                     <p className="mb-25">Запишіться на безкоштовний пробний урок вже сьогодні!</p>
-                    <div className="tg-button-wrap" style={{ justifyContent: "center", gap: "15px", flexWrap: "wrap" }}>
-                      <button onClick={handleContactClick} className="btn arrow-btn">
+                    <div className="tg-button-wrap" style={{
+                      justifyContent: "center",
+                      gap: "15px",
+                      flexWrap: "wrap",
+                      display: "flex",
+                      flexDirection: window.innerWidth < 768 ? "column" : "row",
+                      alignItems: "stretch"
+                    }}>
+                      <button
+                        onClick={handleContactClick}
+                        className="btn arrow-btn"
+                        style={{
+                          width: window.innerWidth < 768 ? "100%" : "auto",
+                          minWidth: window.innerWidth < 768 ? "100%" : "auto"
+                        }}
+                      >
                         Записатися на пробний урок <BtnArrow />
                       </button>
-                      <button onClick={handleTeachersClick} className="btn btn-two arrow-btn">
+                      <button
+                        onClick={handleTeachersClick}
+                        className="btn btn-two arrow-btn"
+                        style={{
+                          width: window.innerWidth < 768 ? "100%" : "auto",
+                          minWidth: window.innerWidth < 768 ? "100%" : "auto"
+                        }}
+                      >
                         ← Всі викладачі
                       </button>
                     </div>
