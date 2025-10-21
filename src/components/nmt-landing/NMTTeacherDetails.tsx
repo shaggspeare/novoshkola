@@ -21,7 +21,7 @@ const NMTTeacherDetails = () => {
             <div className="col-lg-8 text-center">
               <h2>Викладача не знайдено</h2>
               <button onClick={() => {
-                navigate('/nmt');
+                navigate('/');
                 setTimeout(() => {
                   const teachersSection = document.getElementById('teachers');
                   if (teachersSection) {
@@ -39,7 +39,7 @@ const NMTTeacherDetails = () => {
   }
 
   const handleContactClick = () => {
-    navigate('/nmt');
+    navigate('/');
     setTimeout(() => {
       const contactSection = document.getElementById('contact');
       if (contactSection) {
@@ -49,7 +49,7 @@ const NMTTeacherDetails = () => {
   };
 
   const handleTeachersClick = () => {
-    navigate('/nmt');
+    navigate('/');
     setTimeout(() => {
       const teachersSection = document.getElementById('teachers');
       if (teachersSection) {

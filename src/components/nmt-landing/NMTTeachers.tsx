@@ -33,7 +33,7 @@ const NMTTeachers = () => {
                            height: "250px",
                            position: "relative"
                         }}>
-                           <Link to={`/nmt/${teacher.slug}`}>
+                           <Link to={`/teachers/${teacher.slug}`}>
                               <img
                                  src={teacher.image}
                                  alt={teacher.name}
@@ -56,7 +56,7 @@ const NMTTeachers = () => {
                            flexDirection: "column"
                         }}>
                            <h2 className="title" style={{ marginBottom: "8px" }}>
-                              <Link to={`/nmt/${teacher.slug}`}>{teacher.name}</Link>
+                              <Link to={`/teachers/${teacher.slug}`}>{teacher.name}</Link>
                            </h2>
                            <span className="designation" style={{
                               display: "block",
@@ -64,7 +64,7 @@ const NMTTeachers = () => {
                            }}>{teacher.subject}</span>
 
                            <div style={{ marginTop: "auto", textAlign: "center" }}>
-                              <Link to={`/nmt/${teacher.slug}`} className="btn arrow-btn">
+                              <Link to={`/teachers/${teacher.slug}`} className="btn arrow-btn">
                                  Детальніше
                               </Link>
                            </div>
