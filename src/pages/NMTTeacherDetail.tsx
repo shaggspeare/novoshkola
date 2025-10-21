@@ -3,7 +3,7 @@ import SEO from '../components/SEO';
 import { useParams } from 'react-router-dom';
 import nmt_instructor_data from '../data/nmt-data/NMTInstructorData';
 import NMTHeader from '../layouts/headers/NMTHeader';
-import FooterOne from '../layouts/footers/FooterOne';
+import NMTFooter from '../layouts/footers/NMTFooter';
 import NMTTeacherDetails from '../components/nmt-landing/NMTTeacherDetails';
 
 const NMTTeacherDetail = () => {
@@ -17,7 +17,7 @@ const NMTTeacherDetail = () => {
          <main className="main-area fix">
             <NMTTeacherDetails />
          </main>
-         <FooterOne style={false} style_2={false} />
+         <NMTFooter />
       </Wrapper>
    );
 };
