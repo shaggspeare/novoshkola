@@ -7,7 +7,6 @@ interface NMTMobileSidebarProps {
 }
 
 const NMTMobileSidebar = ({ isActive, setIsActive, scrollToSection }: NMTMobileSidebarProps) => {
-
    const handleNavClick = (sectionId: string) => {
       scrollToSection(sectionId);
       setIsActive(false);
