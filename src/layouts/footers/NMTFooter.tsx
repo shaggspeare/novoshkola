@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import Social from "../../components/common/Social"
+// import Social from "../../components/common/Social"
 
 const NMTFooter = () => {
    return (
@@ -10,7 +10,7 @@ const NMTFooter = () => {
                   <div className="col-xl-3 col-lg-4 col-md-6">
                      <div className="footer__widget">
                         <div className="logo mb-35">
-                           <Link to="/nmt"><img src="/assets/img/logo/logo-yellow.png" alt="Новошкола" style={{ maxWidth: "150px", maxHeight: "150px" }} /></Link>
+                           <Link to="/"><img src="/assets/img/logo/logo-yellow.png" alt="Новошкола" style={{ maxWidth: "150px", maxHeight: "150px" }} /></Link>
                         </div>
                         <div className="footer__content">
                            <p>Ефективна підготовка до НМТ з досвідченими викладачами</p>
@@ -41,27 +41,27 @@ const NMTFooter = () => {
                         <h4 className="footer__widget-title">Предмети НМТ</h4>
                         <div className="footer__link">
                            <ul className="list-wrap">
-                              <li><Link to="/nmt">Українська мова</Link></li>
-                              <li><Link to="/nmt">Математика</Link></li>
-                              <li><Link to="/nmt">Історія України</Link></li>
-                              <li><Link to="/nmt">Англійська мова</Link></li>
-                              <li><Link to="/nmt">Біологія</Link></li>
-                              <li><Link to="/nmt">Хімія</Link></li>
+                              <li><div>Українська мова</div></li>
+                              <li><div>Математика</div></li>
+                              <li><div>Історія України</div></li>
+                              <li><div>Англійська мова</div></li>
+                              <li><div>Біологія</div></li>
+                              <li><div>Хімія</div></li>
                            </ul>
                         </div>
                      </div>
                   </div>
-                  <div className="col-xl-3 col-lg-4 col-md-6">
+                  {/* <div className="col-xl-3 col-lg-4 col-md-6">
                      <div className="footer__widget">
                         <h4 className="footer__widget-title">Зв'яжіться з нами</h4>
                         <div className="footer__contact-content">
-                           <p>Підпишіться на наші соціальні мережі для отримання актуальних новин</p>
+                           <p>Підпішіться на наші соціальні мережі для отримання актуальних новин</p>
                            <ul className="list-wrap footer__social">
                               <Social />
                            </ul>
                         </div>
                      </div>
-                  </div>
+                  </div> */}
                </div>
             </div>
          </div>
@@ -77,8 +77,8 @@ const NMTFooter = () => {
                   <div className="col-md-5">
                      <div className="footer__bottom-menu">
                         <ul className="list-wrap">
-                           <li><Link to="/nmt">Умови використання</Link></li>
-                           <li><Link to="/nmt">Політика конфіденційності</Link></li>
+                           <li><Link to="/">Умови використання</Link></li>
+                           <li><Link to="/">Політика конфіденційності</Link></li>
                         </ul>
                      </div>
                   </div>

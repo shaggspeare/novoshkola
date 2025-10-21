@@ -140,9 +140,7 @@
         }
         &.sticky-menu {
             padding: 0 0;
-            @media #{$lg} {
-                padding: 20px 0;
-            }
+
         }
     }
     &__style {

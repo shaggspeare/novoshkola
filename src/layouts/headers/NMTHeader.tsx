@@ -23,9 +23,20 @@ const NMTHeader = () => {
                   <div className="row">
                      <div className="col-12">
                         <div className="tgmenu__wrap">
-                           <nav className="tgmenu__nav">
+                           <nav className="tgmenu__nav" style={{
+                              padding: window.innerWidth < 768 ? '10px 0' : undefined
+                           }}>
                               <div className="logo">
-                                 <Link to="/nmt"><img src="/assets/img/logo/logo-violet.png" alt="Новошкола" style={{ maxWidth: "150px", maxHeight: "60px" }} /></Link>
+                                 <Link to="/">
+                                    <img
+                                       src="/assets/img/logo/logo-violet.png"
+                                       alt="Новошкола"
+                                       style={{
+                                          maxWidth: window.innerWidth < 768 ? "120px" : "150px",
+                                          maxHeight: window.innerWidth < 768 ? "40px" : "60px"
+                                       }}
+                                    />
+                                 </Link>
                               </div>
 
                               {/* Desktop Menu */}

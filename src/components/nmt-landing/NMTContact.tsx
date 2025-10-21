@@ -15,44 +15,8 @@ const NMTContact = () => {
             </div>
 
             <div className="row">
-               <div className="col-lg-4 mb-4 mb-lg-0">
-                  <div className="contact-info-wrap">
-                     <ul className="list-wrap">
-                        <li>
-                           <div className="icon">
-                              <InjectableSvg src="/assets/img/icons/contact_phone.svg" alt="img" className="injectable" />
-                           </div>
-                           <div className="content">
-                              <h4 className="title">Телефон</h4>
-                              <a href="tel:+380123456789">+380 (12) 345 67 89</a>
-                              <a href="tel:+380987654321">+380 (98) 765 43 21</a>
-                           </div>
-                        </li>
-                        <li>
-                           <div className="icon">
-                              <InjectableSvg src="/assets/img/icons/emial.svg" alt="img" className="injectable" />
-                           </div>
-                           <div className="content">
-                              <h4 className="title">Email</h4>
-                              <a href="mailto:info@novoshkola.com">info@novoshkola.com</a>
-                              <a href="mailto:nmt@novoshkola.com">nmt@novoshkola.com</a>
-                           </div>
-                        </li>
-                        <li>
-                           <div className="icon">
-                              <InjectableSvg src="/assets/img/icons/map.svg" alt="img" className="injectable" />
-                           </div>
-                           <div className="content">
-                              <h4 className="title">Графік роботи</h4>
-                              <p>Пн-Пт: 9:00 - 20:00<br />Сб-Нд: 10:00 - 18:00</p>
-                           </div>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-
-               <div className="col-lg-8">
-                  <div className="contact-form-wrap">
+               <div className="col-lg-8 order-1 order-lg-2">
+                  <div className="contact-form-wrap" id="contact-form">
                      <h4 className="title">Записатися на безкоштовний урок</h4>
                      <p>Заповніть форму, і наш менеджер зв'яжеться з вами протягом 15 хвилин</p>
                      <form id="nmt-contact-form">
@@ -96,6 +60,42 @@ const NMTContact = () => {
                         </button>
                      </form>
                      <p className="ajax-response mb-0"></p>
+                  </div>
+               </div>
+
+               <div className="col-lg-4 order-2 order-lg-1 mb-4 mb-lg-0">
+                  <div className="contact-info-wrap">
+                     <ul className="list-wrap">
+                        <li>
+                           <div className="icon">
+                              <InjectableSvg src="/assets/img/icons/contact_phone.svg" alt="img" className="injectable" />
+                           </div>
+                           <div className="content">
+                              <h4 className="title">Телефон</h4>
+                              <a href="tel:+380123456789">+380 (12) 345 67 89</a>
+                              <a href="tel:+380987654321">+380 (98) 765 43 21</a>
+                           </div>
+                        </li>
+                        <li>
+                           <div className="icon">
+                              <InjectableSvg src="/assets/img/icons/emial.svg" alt="img" className="injectable" />
+                           </div>
+                           <div className="content">
+                              <h4 className="title">Email</h4>
+                              <a href="mailto:info@novoshkola.com">info@novoshkola.com</a>
+                              <a href="mailto:nmt@novoshkola.com">nmt@novoshkola.com</a>
+                           </div>
+                        </li>
+                        <li>
+                           <div className="icon">
+                              <InjectableSvg src="/assets/img/icons/map.svg" alt="img" className="injectable" />
+                           </div>
+                           <div className="content">
+                              <h4 className="title">Графік роботи</h4>
+                              <p>Пн-Пт: 9:00 - 20:00<br />Сб-Нд: 10:00 - 18:00</p>
+                           </div>
+                        </li>
+                     </ul>
                   </div>
                </div>
             </div>
