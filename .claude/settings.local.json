@@ -3,7 +3,10 @@
     "allow": [
       "Bash(npm run dev)",
       "Bash(curl -s http://localhost:5174/nmt)",
-      "Bash(curl -s http://localhost:5174/)"
+      "Bash(curl -s http://localhost:5174/)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push)"
     ],
     "deny": [],
     "ask": []

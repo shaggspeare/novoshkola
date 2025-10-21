@@ -88,7 +88,7 @@ const NMTPricing = () => {
                         <div className="mb-3">
                            <i className="flaticon-trophy" style={{ fontSize: "48px", color: "#fff" }}></i>
                         </div>
-                        <h4 className="title" style={{ color: "#fff", fontSize: "20px", marginBottom: "10px" }}>
+                        <h4 className="title" style={{ color: "#fff", fontSize: "24px", marginBottom: "10px" }}>
                            {pricing_notes.trialLesson.title}
                         </h4>
                         <p style={{ color: "rgba(255,255,255,0.9)" }}>
@@ -102,7 +102,7 @@ const NMTPricing = () => {
                         <div className="mb-3">
                            <i className="flaticon-instructor" style={{ fontSize: "48px", color: "#fff" }}></i>
                         </div>
-                        <h4 className="title" style={{ color: "#fff", fontSize: "20px", marginBottom: "10px" }}>
+                        <h4 className="title" style={{ color: "#fff", fontSize: "24px", marginBottom: "10px" }}>
                            {pricing_notes.mentorSupport.title}
                         </h4>
                         <p style={{ color: "rgba(255,255,255,0.9)" }}>
@@ -117,7 +117,7 @@ const NMTPricing = () => {
                         <div className="mb-3">
                            <i className="flaticon-credit-card" style={{ fontSize: "48px", color: "#fff" }}></i>
                         </div>
-                        <h4 className="title" style={{ color: "#fff", fontSize: "20px", marginBottom: "10px" }}>
+                        <h4 className="title" style={{ color: "#fff", fontSize: "24px", marginBottom: "10px" }}>
                            Оплата частинами
                         </h4>
                         <p style={{ color: "rgba(255,255,255,0.9)" }}>
