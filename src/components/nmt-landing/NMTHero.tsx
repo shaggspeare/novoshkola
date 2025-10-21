@@ -8,7 +8,7 @@ const NMTHero = () => {
    return (
       <section
          className="banner-area banner-bg tg-motion-effects"
-         style={{ backgroundImage: `url(/assets/img/banner/banner_bg.png)` }}
+         // style={{ backgroundImage: `url(/assets/img/hero/banner_bg.png)` }}
       >
          <div className="container">
             <div className="row justify-content-between align-items-start">
@@ -41,19 +41,24 @@ const NMTHero = () => {
                </div>
 
                <div className="col-lg-6">
-                  <div className="banner__images">
-                     <img src="/assets/img/banner/banner_img.png" alt="Підготовка до НМТ" className="main-img" />
+                  <div className="banner__images" style={{ position: 'relative', minHeight: '400px' }}>
+                     <img
+                        src="/assets/img/hero/banner_img.png"
+                        alt="Підготовка до НМТ"
+                        className="main-img"
+                        style={{ display: 'block', maxWidth: '100%', height: 'auto' }}
+                     />
                      <div className="shape big-shape" data-aos="fade-up-right" data-aos-delay="600">
-                        <img src="/assets/img/banner/banner_shape01.png" alt="shape" className="tg-motion-effects1" />
+                        <img src="/assets/img/hero/banner_shape01.png" alt="shape" className="tg-motion-effects1" />
                      </div>
-                     <img src="/assets/img/banner/bg_dots.svg" alt="shape" className="shape bg-dots rotateme" />
-                     <img src="/assets/img/banner/banner_shape02.png" alt="shape" className="shape small-shape tg-motion-effects3" />
+                     <img src="/assets/img/hero/bg_dots.svg" alt="shape" className="shape bg-dots rotateme" />
+                     <img src="/assets/img/hero/banner_shape02.png" alt="shape" className="shape small-shape tg-motion-effects3" />
 
                   </div>
                </div>
             </div>
          </div>
-         <img src="/assets/img/banner/banner_shape01.svg" alt="shape" className="line-shape" data-aos="fade-right" data-aos-delay="1600" />
+         {/*<img src="/assets/img/hero/banner_shape01.svg" alt="shape" className="line-shape" data-aos="fade-right" data-aos-delay="1600" />*/}
       </section>
    );
 };

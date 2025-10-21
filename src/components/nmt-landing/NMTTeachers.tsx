@@ -21,6 +21,7 @@ const NMTTeachers = () => {
                      <div className="instructor__item" style={{
                         border: "1px solid #e8e8e8",
                         borderRadius: "8px",
+                         paddingTop: "10px",
                         overflow: "hidden",
                         transition: "all 0.3s ease",
                         height: "100%",
@@ -53,7 +54,8 @@ const NMTTeachers = () => {
                            padding: "25px 20px",
                            flex: "1",
                            display: "flex",
-                           flexDirection: "column"
+                           flexDirection: "column",
+                           textAlign: "center"
                         }}>
                            <h2 className="title" style={{ marginBottom: "8px" }}>
                               <Link to={`/teachers/${teacher.slug}`}>{teacher.name}</Link>
@@ -63,7 +65,7 @@ const NMTTeachers = () => {
                               color: "#666"
                            }}>{teacher.subject}</span>
 
-                           <div style={{ marginTop: "auto", textAlign: "center" }}>
+                           <div style={{ marginTop: 10, textAlign: "center" }}>
                               <Link to={`/teachers/${teacher.slug}`} className="btn arrow-btn">
                                  Детальніше
                               </Link>
