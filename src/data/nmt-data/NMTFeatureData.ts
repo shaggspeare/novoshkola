@@ -66,13 +66,13 @@ const nmt_feature_data: NMTFeatureType[] = [
       title: "Живі онлайн-уроки",
       desc: "Спілкування в Zoom у реальному часі з можливістю отримати запис уроку"
    },
-   {
-      id: 9,
-      page: "nmt",
-      icon: "/assets/img/icons/h4_features_icon01.svg",
-      title: "Зручний графік",
-      desc: "Заняття у вечірній час або на вихідних, щоб легко поєднувати з іншими справами"
-   }
+   // {
+   //    id: 9,
+   //    page: "nmt",
+   //    icon: "/assets/img/icons/h4_features_icon01.svg",
+   //    title: "Зручний графік",
+   //    desc: "Заняття у вечірній час або на вихідних, щоб легко поєднувати з іншими справами"
+   // }
 ];
 
 export default nmt_feature_data;

@@ -17,8 +17,8 @@ const NMTFeatures = () => {
             <div className="features__item-wrap">
                <div className="row justify-content-center">
                   {nmt_feature_data.filter((items) => items.page === "nmt").map((item) => (
-                     <div key={item.id} className="col-lg-4 col-md-6 mb-30" style={{ display: "flex" }}>
-                        <div className="features__item-two" style={{
+                     <div key={item.id} className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-25 nmt-feature-col" style={{ display: "flex" }}>
+                        <div className="features__item-two nmt-feature-item" style={{
                            display: "flex",
                            flexDirection: "column",
                            width: "100%",
@@ -31,16 +31,13 @@ const NMTFeatures = () => {
                               flexGrow: 1
                            }}>
                               <div className="content-top">
-                                 <div className="features__icon-two">
+                                 <div className="features__icon-two nmt-feature-icon">
                                     <InjectableSvg src={item.icon} alt={item.title} className="injectable" />
                                  </div>
-                                 <h2 className="title">{item.title}</h2>
+                                 <h2 className="title nmt-feature-title">{item.title}</h2>
                               </div>
-                              <p style={{ flexGrow: 1 }}>{item.desc}</p>
+                              <p className="nmt-feature-desc" style={{ flexGrow: 1 }}>{item.desc}</p>
                            </div>
-                           {/*<div className="features__item-shape">*/}
-                           {/*   <InjectableSvg src="/assets/img/others/features_item_shape.svg" alt="img" className="injectable" />*/}
-                           {/*</div>*/}
                         </div>
                      </div>
                   ))}

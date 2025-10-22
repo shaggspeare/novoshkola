@@ -106,31 +106,22 @@ const NMTLanding = () => {
          <main className="main-area fix">
             {/* Hero Section */}
             <NMTHero />
-
             {/* Stats Section - Social Proof */}
             <NMTStats />
-
             {/* About - Features / Why Choose Us */}
             <NMTFeatures />
-
             {/* Program - Course Programs */}
             <NMTPrograms />
-
             {/* How It Works - Process */}
             <NMTHowItWorks />
-
             {/* Teachers */}
             <NMTTeachers />
-
             {/* Prices */}
             <NMTPricing />
-
             {/* Reviews / Testimonials */}
             <NMTTestimonials />
-
             {/* FAQ */}
             <NMTFaq />
-
             {/* Contact Form Section */}
             <NMTContact />
          </main>

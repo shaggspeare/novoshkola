@@ -7,21 +7,42 @@ interface StickyState {
 const UseSticky = (): StickyState => {
    const [sticky, setSticky] = useState(false);
 
-   const stickyHeader = (): void => {
-      if (window.scrollY > 200) {
-         setSticky(true);
-      } else {
-         setSticky(false);
-      }
-   };
-
    useEffect(() => {
-      window.addEventListener("scroll", stickyHeader);
+      let ticking = false;
+
+      const stickyHeader = (): void => {
+         const scrollY = window.scrollY || window.pageYOffset;
+         if (scrollY > 100) {
+            setSticky(true);
+         } else {
+            setSticky(false);
+         }
+      };
+
+      const requestTick = (): void => {
+         if (!ticking) {
+            requestAnimationFrame(() => {
+               stickyHeader();
+               ticking = false;
+            });
+            ticking = true;
+         }
+      };
+
+      // Initial check
+      stickyHeader();
+
+      // Use passive event listener for better iOS performance
+      window.addEventListener("scroll", requestTick, { passive: true });
+      // Additional event for iOS elastic scrolling
+      window.addEventListener("touchmove", requestTick, { passive: true });
 
       return (): void => {
-         window.removeEventListener("scroll", stickyHeader);
+         window.removeEventListener("scroll", requestTick);
+         window.removeEventListener("touchmove", requestTick);
       };
    }, []);
+
    return {
       sticky,
    };
