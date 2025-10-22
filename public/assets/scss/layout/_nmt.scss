@@ -836,6 +836,58 @@ main.main-area {
     }
 }
 
+// NMT Subjects - Compact cards
+.nmt-subject-card {
+    @media #{$xs} {
+        padding: 20px 12px !important;
+
+        // Icon circle
+        & > div:first-child {
+            width: 50px !important;
+            height: 50px !important;
+            margin-bottom: 12px !important;
+
+            i {
+                font-size: 24px !important;
+            }
+        }
+
+        // Title
+        h4 {
+            font-size: 14px !important;
+            margin-bottom: 4px !important;
+        }
+
+        // Note text
+        span {
+            font-size: 11px !important;
+        }
+
+        // Popular badge
+        & > span {
+            font-size: 9px !important;
+            padding: 2px 6px !important;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        padding: 20px 12px !important;
+
+        & > div:first-child {
+            width: 55px !important;
+            height: 55px !important;
+
+            i {
+                font-size: 26px !important;
+            }
+        }
+
+        h4 {
+            font-size: 15px !important;
+        }
+    }
+}
+
 // NMT Programs mobile improvements
 .courses__item {
     @media #{$xs} {

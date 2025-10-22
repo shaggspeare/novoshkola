@@ -44,9 +44,6 @@ const NMTFooter = () => {
                               <li><div>Українська мова</div></li>
                               <li><div>Математика</div></li>
                               <li><div>Історія України</div></li>
-                              <li><div>Англійська мова</div></li>
-                              <li><div>Біологія</div></li>
-                              <li><div>Хімія</div></li>
                            </ul>
                         </div>
                      </div>

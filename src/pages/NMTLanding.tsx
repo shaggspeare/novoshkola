@@ -2,6 +2,7 @@ import NMTHeader from "../layouts/headers/NMTHeader";
 import NMTFooter from "../layouts/footers/NMTFooter";
 import {
    NMTHero,
+   NMTSubjects,
    NMTStats,
    NMTFeatures,
    NMTPrograms,
@@ -106,8 +107,10 @@ const NMTLanding = () => {
          <main className="main-area fix">
             {/* Hero Section */}
             <NMTHero />
-            {/* Stats Section - Social Proof */}
-            <NMTStats />
+             <NMTStats />
+             {/* Stats Section - Social Proof */}
+             {/* Subjects Section */}
+             <NMTSubjects />
             {/* About - Features / Why Choose Us */}
             <NMTFeatures />
             {/* Program - Course Programs */}

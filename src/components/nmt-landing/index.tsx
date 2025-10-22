@@ -1,5 +1,6 @@
 // Export all NMT Landing components
 export { default as NMTHero } from './NMTHero';
+export { default as NMTSubjects } from './NMTSubjects';
 export { default as NMTFeatures } from './NMTFeatures';
 export { default as NMTPrograms } from './NMTPrograms';
 export { default as NMTHowItWorks } from './NMTHowItWorks';
