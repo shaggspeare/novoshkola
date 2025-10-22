@@ -20,7 +20,7 @@ main.main-area {
         }
 
         @media #{$xs} {
-            padding-top: 50px !important;
+            padding-top: 35px !important; // Even smaller on mobile
         }
     }
 
@@ -33,7 +33,7 @@ main.main-area {
         }
 
         @media #{$xs} {
-            padding-bottom: 50px !important;
+            padding-bottom: 35px !important; // Even smaller on mobile
         }
     }
 
@@ -46,7 +46,7 @@ main.main-area {
         }
 
         @media #{$xs} {
-            padding: 45px 0 !important;
+            padding: 30px 0 !important; // Much smaller on mobile
         }
     }
 
@@ -56,8 +56,8 @@ main.main-area {
         padding-bottom: 60px !important;
 
         @media #{$xs} {
-            padding-top: 45px !important;
-            padding-bottom: 45px !important;
+            padding-top: 30px !important;
+            padding-bottom: 30px !important;
         }
     }
 
@@ -66,8 +66,8 @@ main.main-area {
         padding-bottom: 60px !important;
 
         @media #{$xs} {
-            padding-top: 45px !important;
-            padding-bottom: 45px !important;
+            padding-top: 30px !important;
+            padding-bottom: 30px !important;
         }
     }
 
@@ -76,8 +76,8 @@ main.main-area {
         padding-bottom: 60px !important;
 
         @media #{$xs} {
-            padding-top: 45px !important;
-            padding-bottom: 45px !important;
+            padding-top: 30px !important;
+            padding-bottom: 30px !important;
         }
     }
 
@@ -86,8 +86,8 @@ main.main-area {
         padding-bottom: 60px !important;
 
         @media #{$xs} {
-            padding-top: 45px !important;
-            padding-bottom: 45px !important;
+            padding-top: 30px !important;
+            padding-bottom: 30px !important;
         }
     }
 
@@ -96,18 +96,27 @@ main.main-area {
         padding-bottom: 60px !important;
 
         @media #{$xs} {
-            padding-top: 45px !important;
-            padding-bottom: 45px !important;
+            padding-top: 30px !important;
+            padding-bottom: 30px !important;
         }
     }
 
-    .contact__area {
+    .contact__area,
+    .contact-area {
         padding-top: 60px !important;
         padding-bottom: 60px !important;
 
         @media #{$xs} {
-            padding-top: 45px !important;
-            padding-bottom: 45px !important;
+            padding-top: 30px !important;
+            padding-bottom: 30px !important;
+        }
+    }
+
+    // Categories/Subjects area
+    .categories-area {
+        @media #{$xs} {
+            padding-top: 30px !important;
+            padding-bottom: 30px !important;
         }
     }
 }
@@ -312,7 +321,7 @@ main.main-area {
         }
     }
 
-    // More compact pricing cards
+    // More compact pricing cards - significantly smaller on mobile
     .courses__item {
         margin-bottom: 20px !important;
 
@@ -320,7 +329,7 @@ main.main-area {
             padding: 30px 20px 25px !important;
 
             @media #{$xs} {
-                padding: 25px 15px 20px !important;
+                padding: 18px 12px 15px !important;
             }
         }
 
@@ -330,7 +339,7 @@ main.main-area {
                 margin-bottom: 20px !important;
 
                 @media #{$xs} {
-                    margin-bottom: 15px !important;
+                    margin-bottom: 12px !important;
                 }
             }
 
@@ -339,7 +348,8 @@ main.main-area {
                 font-size: clamp(18px, 4.5vw, 22px) !important;
 
                 @media #{$xs} {
-                    font-size: 18px !important;
+                    font-size: 16px !important;
+                    margin-bottom: 6px !important;
                 }
             }
 
@@ -351,17 +361,25 @@ main.main-area {
                     font-size: 36px !important;
 
                     @media #{$xs} {
-                        font-size: 32px !important;
+                        font-size: 28px !important;
                     }
                 }
 
                 span:last-child {
                     font-size: 16px !important;
+
+                    @media #{$xs} {
+                        font-size: 14px !important;
+                    }
                 }
             }
 
             p {
                 font-size: 13px !important;
+
+                @media #{$xs} {
+                    font-size: 11px !important;
+                }
             }
         }
 
@@ -369,15 +387,24 @@ main.main-area {
         .about__info-list {
             margin-bottom: 15px !important;
 
+            @media #{$xs} {
+                margin-bottom: 10px !important;
+            }
+
             .about__info-list-item {
                 padding: 8px 0 !important;
 
                 @media #{$xs} {
-                    padding: 6px 0 !important;
+                    padding: 4px 0 !important;
                 }
 
                 i {
                     margin-right: 8px;
+
+                    @media #{$xs} {
+                        font-size: 11px !important;
+                        margin-right: 6px !important;
+                    }
                 }
 
                 p.content {
@@ -385,7 +412,8 @@ main.main-area {
                     line-height: 1.4 !important;
 
                     @media #{$xs} {
-                        font-size: 13px !important;
+                        font-size: 11px !important;
+                        line-height: 1.3 !important;
                     }
                 }
             }
@@ -394,37 +422,54 @@ main.main-area {
         // Compact button
         .courses__item-bottom {
             padding-top: 10px !important;
+
+            @media #{$xs} {
+                padding-top: 8px !important;
+
+                .button a {
+                    padding: 8px 15px !important;
+                    font-size: 12px !important;
+                }
+            }
         }
     }
 
-    // More compact additional pricing info
+    // More compact additional pricing info - fix visibility
     .fact__inner-wrap {
         margin-top: 40px !important;
 
         @media #{$xs} {
-            margin-top: 30px !important;
+            margin-top: 25px !important;
+            overflow: visible !important;
+        }
+
+        .row {
+            @media #{$xs} {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
         }
 
         .fact__item {
             padding: 20px 15px !important;
 
             @media #{$xs} {
-                padding: 18px 12px !important;
-                margin-bottom: 15px !important;
+                padding: 15px 10px !important;
+                margin-bottom: 12px !important;
             }
 
             .mb-3 {
                 margin-bottom: 12px !important;
 
                 @media #{$xs} {
-                    margin-bottom: 10px !important;
+                    margin-bottom: 8px !important;
                 }
 
                 i {
                     font-size: 40px !important;
 
                     @media #{$xs} {
-                        font-size: 36px !important;
+                        font-size: 30px !important;
                     }
                 }
             }
@@ -434,8 +479,9 @@ main.main-area {
                 margin-bottom: 8px !important;
 
                 @media #{$xs} {
-                    font-size: 18px !important;
-                    margin-bottom: 6px !important;
+                    font-size: 15px !important;
+                    margin-bottom: 5px !important;
+                    line-height: 1.3 !important;
                 }
             }
 
@@ -445,7 +491,8 @@ main.main-area {
                 margin-bottom: 0 !important;
 
                 @media #{$xs} {
-                    font-size: 13px !important;
+                    font-size: 11px !important;
+                    line-height: 1.4 !important;
                 }
             }
         }
@@ -836,37 +883,44 @@ main.main-area {
     }
 }
 
-// NMT Subjects - Compact cards
+// NMT Subjects - Compact cards for mobile (2 columns)
+.nmt-subject-col {
+    @media #{$xs} {
+        margin-bottom: 12px !important;
+    }
+}
+
 .nmt-subject-card {
     @media #{$xs} {
-        padding: 20px 12px !important;
+        padding: 15px 8px !important;
+        border-width: 1.5px !important;
 
         // Icon circle
         & > div:first-child {
-            width: 50px !important;
-            height: 50px !important;
-            margin-bottom: 12px !important;
+            width: 45px !important;
+            height: 45px !important;
+            margin-bottom: 10px !important;
 
             i {
-                font-size: 24px !important;
+                font-size: 20px !important;
             }
         }
 
         // Title
         h4 {
-            font-size: 14px !important;
-            margin-bottom: 4px !important;
+            font-size: 13px !important;
+            margin-bottom: 3px !important;
+            line-height: 1.2 !important;
         }
 
         // Note text
         span {
-            font-size: 11px !important;
+            font-size: 10px !important;
         }
 
-        // Popular badge
+        // Popular badge - hide on mobile to save space
         & > span {
-            font-size: 9px !important;
-            padding: 2px 6px !important;
+            display: none !important;
         }
     }
 
@@ -888,64 +942,151 @@ main.main-area {
     }
 }
 
-// NMT Programs mobile improvements
+// NMT Programs mobile improvements - significantly smaller
 .courses__item {
     @media #{$xs} {
+        margin-bottom: 15px !important;
+        padding: 15px 12px !important;
+
         h5.title {
-            font-size: 18px !important;
-            line-height: 1.4;
+            font-size: 16px !important;
+            line-height: 1.3 !important;
+            margin-bottom: 8px !important;
 
             a {
                 font-size: inherit;
             }
         }
 
+        .courses__item-thumb {
+            margin-bottom: 12px !important;
+        }
+
+        .courses__item-content {
+            padding: 12px 10px !important;
+        }
+
+        .about__info-list {
+            margin-bottom: 10px !important;
+        }
+
         .about__info-list-item {
-            padding: 8px 0;
+            padding: 5px 0 !important;
+            margin-bottom: 5px !important;
+
+            i {
+                font-size: 12px !important;
+                margin-right: 6px !important;
+            }
 
             p.content {
-                font-size: 14px;
-                line-height: 1.5;
+                font-size: 12px !important;
+                line-height: 1.4 !important;
+            }
+        }
+
+        .courses__item-bottom {
+            margin-top: 10px !important;
+            padding-top: 10px !important;
+
+            .button a {
+                padding: 8px 15px !important;
+                font-size: 13px !important;
             }
         }
     }
 }
 
-// NMT How It Works mobile improvements
+// NMT How It Works mobile improvements - more compact
 .about__info-list-item {
     @media #{$xs} {
+        padding: 10px 12px !important;
+        margin-bottom: 10px !important;
+
         .step-number {
-            width: 35px !important;
-            height: 35px !important;
-            font-size: 16px !important;
-            top: 12px !important;
-            right: 12px !important;
+            width: 32px !important;
+            height: 32px !important;
+            font-size: 14px !important;
+            top: 10px !important;
+            right: 10px !important;
+        }
+
+        h4 {
+            font-size: 15px !important;
+            line-height: 1.3 !important;
+            margin-bottom: 6px !important;
+        }
+
+        p {
+            font-size: 12px !important;
+            line-height: 1.4 !important;
         }
     }
 }
 
-// NMT Contact form mobile improvements
-.contact-form-wrap {
+// NMT Testimonials - significantly smaller on mobile
+.testimonial__item-four {
     @media #{$xs} {
-        h4.title {
-            font-size: 20px !important;
-            line-height: 1.4;
-            margin-bottom: 10px;
+        padding: 20px 15px !important;
+
+        .rating {
+            margin-bottom: 10px !important;
+
+            i {
+                font-size: 14px !important;
+            }
         }
 
         p {
-            font-size: 14px;
-            margin-bottom: 20px;
+            font-size: 13px !important;
+            line-height: 1.5 !important;
+            margin-bottom: 15px !important;
+        }
+
+        .testimonial__bottom-two {
+            h4.title {
+                font-size: 15px !important;
+                margin-bottom: 4px !important;
+            }
+
+            span {
+                font-size: 12px !important;
+            }
+        }
+    }
+}
+
+// NMT Contact form mobile improvements - smaller textarea
+.contact-form-wrap {
+    @media #{$xs} {
+        padding: 20px 15px !important;
+
+        h4.title {
+            font-size: 18px !important;
+            line-height: 1.3 !important;
+            margin-bottom: 8px !important;
+        }
+
+        p {
+            font-size: 13px !important;
+            margin-bottom: 15px !important;
         }
 
         .form-grp {
-            margin-bottom: 15px;
+            margin-bottom: 12px !important;
 
             input,
-            select,
+            select {
+                font-size: 13px !important;
+                padding: 10px 12px !important;
+                height: 42px !important;
+            }
+
             textarea {
-                font-size: 14px;
-                padding: 12px 15px;
+                font-size: 13px !important;
+                padding: 10px 12px !important;
+                min-height: 80px !important; // Much smaller textarea
+                resize: vertical !important;
             }
         }
 

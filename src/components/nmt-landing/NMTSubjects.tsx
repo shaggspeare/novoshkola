@@ -59,7 +59,7 @@ const NMTSubjects = () => {
 
             <div className="row justify-content-center">
                {subjects.map((subject) => (
-                  <div key={subject.id} className="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-25">
+                  <div key={subject.id} className="col-xl-2 col-lg-3 col-md-4 col-6 mb-20 nmt-subject-col">
                      <div className="nmt-subject-card" style={{
                         background: subject.popular ? "#fff" : "#f9f9f9",
                         border: `2px solid ${subject.borderColor}`,

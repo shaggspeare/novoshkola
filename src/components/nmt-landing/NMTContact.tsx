@@ -61,7 +61,7 @@ const NMTContact = () => {
                            </div>
                            <div className="col-md-12">
                               <div className="form-grp">
-                                 <textarea name="message" placeholder="Коментар (необов'язково)" rows={4}></textarea>
+                                 <textarea name="message" placeholder="Коментар (необов'язково)" rows={3}></textarea>
                               </div>
                            </div>
                         </div>
