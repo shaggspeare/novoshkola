@@ -15,7 +15,7 @@ const NMTTeacherDetails = () => {
 
   if (!teacher) {
     return (
-      <section className="instructor__details-area section-pt-120 section-pb-90">
+      <section className="instructor__details-area section-pt-60 section-pb-90">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-8 text-center">
@@ -59,7 +59,7 @@ const NMTTeacherDetails = () => {
   };
 
   return (
-    <section className="instructor__details-area section-pt-120 section-pb-90" id="teacher-bio">
+    <section className="instructor__details-area section-pt-60 section-pb-90" id="teacher-bio">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-xl-10">
@@ -73,7 +73,9 @@ const NMTTeacherDetails = () => {
                   <img src={teacher.image} alt={teacher.name} style={{
                     width: "100%",
                     height: "auto",
-                    display: "block"
+                    display: "block",
+                    objectFit: "cover",
+                    objectPosition: "top center"
                   }} />
                 </div>
                 <div className="instructor__details-content">

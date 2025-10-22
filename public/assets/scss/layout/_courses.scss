@@ -31,12 +31,12 @@
             padding: 100px 0;
         }
         & .section__title-wrap {
-            margin: 0 0 50px;
+            margin: 0;
             @media #{$xs} {
-                margin: 0 0 40px;
+                margin: 0;
             }
             @media #{$lg} {
-                margin: 0 0 30px;
+                margin: 0 0 20px;
             }
         }
         &-six {

@@ -2,10 +2,14 @@ import { useState } from "react";
 import nmt_faq_data from "../../data/nmt-data/NMTFaqData";
 
 const NMTFaq = () => {
-   const [activeIndex, setActiveIndex] = useState<number | null>(1);
+   const [activeIndexes, setActiveIndexes] = useState<number[]>([1]);
 
    const toggleAccordion = (index: number) => {
-      setActiveIndex(activeIndex === index ? null : index);
+      setActiveIndexes(prev =>
+         prev.includes(index)
+            ? prev.filter(i => i !== index)
+            : [...prev, index]
+      );
    };
 
    return (
@@ -28,17 +32,17 @@ const NMTFaq = () => {
                            <div key={item.id} className="accordion-item">
                               <h2 className="accordion-header">
                                  <button
-                                    className={`accordion-button ${activeIndex === item.id ? '' : 'collapsed'}`}
+                                    className={`accordion-button ${activeIndexes.includes(item.id) ? '' : 'collapsed'}`}
                                     type="button"
                                     onClick={() => toggleAccordion(item.id)}
-                                    aria-expanded={activeIndex === item.id}
+                                    aria-expanded={activeIndexes.includes(item.id)}
                                  >
                                     {item.question}
                                  </button>
                               </h2>
                               <div
                                  id={`collapse${item.id}`}
-                                 className={`accordion-collapse collapse ${activeIndex === item.id ? "show" : ""}`}
+                                 className={`accordion-collapse collapse ${activeIndexes.includes(item.id) ? "show" : ""}`}
                               >
                                  <div className="accordion-body">
                                     <p>{item.answer}</p>
@@ -48,6 +52,15 @@ const NMTFaq = () => {
                         ))}
                      </div>
                   </div>
+               </div>
+            </div>
+
+            {/* CTA Button */}
+            <div className="row justify-content-center" style={{ marginTop: "40px" }}>
+               <div className="col-auto">
+                  <a href="#contact" className="btn arrow-btn" style={{ textTransform: 'none' }}>
+                     Записатися
+                  </a>
                </div>
             </div>
          </div>

@@ -118,11 +118,11 @@ const NMTLanding = () => {
             <NMTTeachers />
             {/* Prices */}
             <NMTPricing />
-            {/* Reviews / Testimonials */}
-            <NMTTestimonials />
             {/* FAQ */}
-            <NMTFaq />
-            {/* Contact Form Section */}
+             <NMTFaq />
+             {/* Reviews / Testimonials */}
+             <NMTTestimonials />
+             {/* Contact Form Section */}
             <NMTContact />
          </main>
          <NMTFooter />

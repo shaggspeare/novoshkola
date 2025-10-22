@@ -36,7 +36,7 @@ const NMTContact = () => {
                                  <input type="email" name="email" placeholder="Email *" required />
                               </div>
                            </div>
-                           <div className="col-md-12">
+                           <div className="col-md-6">
                               <div className="form-grp">
                                  <select name="program" className="form-select">
                                     <option value="">Оберіть програму</option>
@@ -45,6 +45,17 @@ const NMTContact = () => {
                                     <option value="express">НМТ Експрес (3 місяці)</option>
                                     <option value="personal">Персональна програма</option>
                                     <option value="annual">Річна програма для 10 класу</option>
+                                    <option value="undecided">Ще не визначився(-лась)</option>
+                                 </select>
+                              </div>
+                           </div>
+                           <div className="col-md-6">
+                              <div className="form-grp">
+                                 <select name="format" className="form-select">
+                                    <option value="">Оберіть формат навчання</option>
+                                    <option value="group">Група (до 5 учнів)</option>
+                                    <option value="individual">Індивідуально (1-на-1)</option>
+                                    <option value="undecided">Не визначився(-лась)</option>
                                  </select>
                               </div>
                            </div>

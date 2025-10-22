@@ -43,6 +43,15 @@ const NMTFeatures = () => {
                   ))}
                </div>
             </div>
+
+            {/* CTA Button */}
+            <div className="row justify-content-center" style={{ marginTop: "30px" }}>
+               <div className="col-auto">
+                  <a href="#contact" className="btn arrow-btn" style={{ textTransform: 'none' }}>
+                     Записатися на безкоштовний урок
+                  </a>
+               </div>
+            </div>
          </div>
       </section>
    )

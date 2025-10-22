@@ -81,6 +81,15 @@ const NMTTestimonials = () => {
                   </Swiper>
                </div>
             </div>
+
+            {/* CTA Button */}
+            <div className="row justify-content-center" style={{ marginTop: "40px" }}>
+               <div className="col-auto">
+                  <a href="#contact" className="btn arrow-btn" style={{ textTransform: 'none' }}>
+                     Спробувати пробний урок
+                  </a>
+               </div>
+            </div>
          </div>
       </section>
    )

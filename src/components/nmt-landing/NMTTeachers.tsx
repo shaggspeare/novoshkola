@@ -17,21 +17,21 @@ const NMTTeachers = () => {
 
             <div className="row justify-content-center">
                {nmt_instructor_data.map((teacher) => (
-                  <div key={teacher.id} className="col-xl-4 col-lg-4 col-sm-6 mb-30">
-                     <div className="instructor__item" style={{
+                  <div key={teacher.id} className="col-xl-4 col-lg-4 col-sm-6 mb-25 nmt-teacher-col">
+                     <div className="instructor__item nmt-teacher-card" style={{
                         border: "1px solid #e8e8e8",
                         borderRadius: "8px",
-                         paddingTop: "10px",
+                        paddingTop: "8px",
                         overflow: "hidden",
                         transition: "all 0.3s ease",
                         height: "100%",
                         display: "flex",
                         flexDirection: "column"
                      }}>
-                        <div className="instructor__thumb" style={{
+                        <div className="instructor__thumb nmt-teacher-thumb" style={{
                            overflow: "hidden",
                            borderRadius: "8px",
-                           height: "250px",
+                           height: "200px",
                            position: "relative"
                         }}>
                            <Link to={`/teachers/${teacher.slug}`}>
@@ -42,6 +42,7 @@ const NMTTeachers = () => {
                                     width: "100%",
                                     height: "100%",
                                     objectFit: "cover",
+                                    objectPosition: "top center",
                                     display: "block",
                                     transition: "transform 0.3s ease"
                                  }}
@@ -50,22 +51,22 @@ const NMTTeachers = () => {
                               />
                            </Link>
                         </div>
-                        <div className="instructor__content" style={{
-                           padding: "25px 20px",
+                        <div className="instructor__content nmt-teacher-content" style={{
+                           padding: "18px 15px",
                            flex: "1",
                            display: "flex",
                            flexDirection: "column",
                            textAlign: "center"
                         }}>
-                           <h2 className="title" style={{ marginBottom: "8px" }}>
+                           <h2 className="title nmt-teacher-name" style={{ marginBottom: "6px" }}>
                               <Link to={`/teachers/${teacher.slug}`}>{teacher.name}</Link>
                            </h2>
-                           <span className="designation" style={{
+                           <span className="designation nmt-teacher-subject" style={{
                               display: "block",
                               color: "#666"
                            }}>{teacher.subject}</span>
 
-                           <div style={{ marginTop: 10, textAlign: "center" }}>
+                           <div className="nmt-teacher-btn-wrap" style={{ marginTop: 8, textAlign: "center" }}>
                               <Link to={`/teachers/${teacher.slug}`} className="btn arrow-btn">
                                  Детальніше
                               </Link>
@@ -74,6 +75,15 @@ const NMTTeachers = () => {
                      </div>
                   </div>
                ))}
+            </div>
+
+            {/* CTA Button */}
+            <div className="row justify-content-center" style={{ marginTop: "40px" }}>
+               <div className="col-auto">
+                  <a href="#contact" className="btn arrow-btn" style={{ textTransform: 'none' }}>
+                     Записатися на безкоштовний урок
+                  </a>
+               </div>
             </div>
          </div>
       </section>
