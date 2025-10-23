@@ -48,8 +48,9 @@ const NMTHero = () => {
                         className="main-img"
                         style={{ display: 'block', maxWidth: '100%', height: 'auto' }}
                      />
+
                      <div className="shape big-shape" data-aos="fade-up-right" data-aos-delay="600">
-                        <img src="/assets/img/hero/banner_shape01.png" alt="shape" className="tg-motion-effects1" />
+                        <img src="/assets/img/hero/banner_arrow_yellow.png" alt="shape" className="tg-motion-effects1" />
                      </div>
                      <img src="/assets/img/hero/bg_dots.svg" alt="shape" className="shape bg-dots rotateme" />
                      <img src="/assets/img/hero/banner_shape02.png" alt="shape" className="shape small-shape tg-motion-effects3" />

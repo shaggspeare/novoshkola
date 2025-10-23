@@ -716,6 +716,7 @@ main.main-area {
     }
 
     .instructor__details-info {
+        background: color-mix(in srgb, var(--tg-common-color-blue-2) 80%, black);
         margin-bottom: 30px !important;
         padding-bottom: 25px !important;
 

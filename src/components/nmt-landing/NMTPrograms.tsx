@@ -24,7 +24,7 @@ const NMTPrograms = () => {
                   {program.tag && (
                     <ul className="courses__item-meta list-wrap">
                       <li className="courses__item-tag">
-                        <a href="#contact" style={{ background: program.tag === "Популярний" ? "#f6520a" : "#5866eb" }}>
+                        <a href="#contact" style={{ background: program.tag === "Популярний" ? "#f6520a" : "#6A4E9B" }}>
                           {program.tag}
                         </a>
                       </li>

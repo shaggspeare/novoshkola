@@ -18,7 +18,7 @@ const NMTPricing = () => {
                {nmt_pricing_data.map((pricing) => (
                   <div key={pricing.id} className="col-lg-5 col-md-6 mb-30">
                      <div className="courses__item shine__animate-item" style={{
-                        border: pricing.isPopular ? "2px solid #5866eb" : "1px solid #e8e8e8",
+                        border: pricing.isPopular ? "2px solid #6A4E9B" : "1px solid #e8e8e8",
                         position: "relative",
                         height: "100%"
                      }}>
@@ -27,7 +27,7 @@ const NMTPricing = () => {
                               position: "absolute",
                               top: "15px",
                               right: "15px",
-                              background: "#5866eb",
+                              background: "#6A4E9B",
                               color: "#fff",
                               padding: "5px 15px",
                               borderRadius: "20px",
@@ -45,7 +45,7 @@ const NMTPricing = () => {
                                  {pricing.title}
                               </h3>
                               <div style={{ marginBottom: "10px" }}>
-                                 <span style={{ fontSize: "42px", fontWeight: "800", color: "#5866eb" }}>
+                                 <span style={{ fontSize: "42px", fontWeight: "800", color: "#6A4E9B" }}>
                                     {pricing.price}
                                  </span>
                                  <span style={{ fontSize: "18px", marginLeft: "5px", color: "#666" }}>

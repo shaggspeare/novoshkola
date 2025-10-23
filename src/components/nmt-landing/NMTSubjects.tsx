@@ -5,24 +5,24 @@ const NMTSubjects = () => {
          name: "Українська мова",
           icon: "flaticon-book",
          popular: true,
-         color: "linear-gradient(135deg, #5866eb 0%, #8b5cf6 100%)", // Blue-Purple
-         borderColor: "#5866eb"
+         color: "#6A4E9B",
+         borderColor: "#6A4E9B"
       },
       {
          id: 2,
          name: "Математика",
           icon: "flaticon-book",
          popular: true,
-         color: "linear-gradient(135deg, #f59e0b 0%, #f97316 100%)", // Orange
-         borderColor: "#f59e0b"
+         color: "#FFC224 ", // Orange
+         borderColor: "#FFC224"
       },
       {
          id: 3,
          name: "Історія України",
          icon: "flaticon-book",
          popular: true,
-         color: "linear-gradient(135deg, #10b981 0%, #059669 100%)", // Green
-         borderColor: "#10b981"
+         color: "#1BCBE3", // Green
+         borderColor: "#1BCBE3"
       },
 
       {
@@ -133,7 +133,7 @@ const NMTSubjects = () => {
                      color: "#666",
                      marginBottom: "0"
                   }}>
-                     <i className="flaticon-info" style={{ marginRight: "8px", color: "#5866eb" }}></i>
+                     <i className="flaticon-info" style={{ marginRight: "8px", color: "#6A4E9B" }}></i>
                      Потрібен інший предмет? Зв'яжіться з нами, і ми підберемо викладача!
                   </p>
                </div>
