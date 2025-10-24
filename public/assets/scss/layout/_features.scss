@@ -41,9 +41,9 @@
         }
         &-two {
             @include border-radius(20px);
-            border: 1px solid #C9E4E9;
+            border: 1px solid #63B32E;
             background: #F1FDFF;
-            box-shadow: 8px 8px 0px 0px #C9E4E9;
+            box-shadow: 8px 8px 0px 0px rgba(99, 179, 46, 0.29);
             padding: 40px 40px 40px 50px;
             position: relative;
             z-index: 1;
@@ -55,7 +55,7 @@
             &:hover {
                 box-shadow: none !important;
                 & .features__item-shape {
-                    color: #1BCBE3;
+                    color: #63B32E;
                 }
             }
         }
@@ -191,15 +191,15 @@
                     // Item 1 - Cyan (default)
                     &:nth-child(1) {
                         & .features__item-two {
-                            border: 1px solid #C9E4E9;
+                            border: 1px solid #63B32E;
                             background: #F1FDFF;
-                            box-shadow: 8px 8px 0px 0px #C9E4E9;
+                            box-shadow: 8px 8px 0px 0px rgba(99, 179, 46, 0.29);
                             & .features__icon-two {
-                                background: #1BCBE3;
+                                background: #63B32E;
                             }
                             &:hover {
                                 & .features__item-shape {
-                                    color: #1BCBE3;
+                                    color: #63B32E;
                                 }
                             }
                         }
@@ -255,15 +255,15 @@
                     // Item 5 - Cyan
                     &:nth-child(5) {
                         & .features__item-two {
-                            border: 1px solid #C9E4E9;
+                            border: 1px solid #63B32E;
                             background: #F1FDFF;
-                            box-shadow: 8px 8px 0px 0px #C9E4E9;
+                            box-shadow: 8px 8px 0px 0px rgba(99, 179, 46, 0.29);
                             & .features__icon-two {
-                                background: #1BCBE3;
+                                background: #63B32E;
                             }
                             &:hover {
                                 & .features__item-shape {
-                                    color: #1BCBE3;
+                                    color: #63B32E;
                                 }
                             }
                         }
@@ -303,15 +303,15 @@
                     // Item 8 - Cyan
                     &:nth-child(8) {
                         & .features__item-two {
-                            border: 1px solid #C9E4E9;
+                            border: 1px solid #63B32E;
                             background: #F1FDFF;
-                            box-shadow: 8px 8px 0px 0px #C9E4E9;
+                            box-shadow: 8px 8px 0px 0px rgba(99, 179, 46, 0.29);
                             & .features__icon-two {
-                                background: #1BCBE3;
+                                background: #63B32E;
                             }
                             &:hover {
                                 & .features__item-shape {
-                                    color: #1BCBE3;
+                                    color: #63B32E;
                                 }
                             }
                         }
@@ -435,7 +435,7 @@
             height: 70px;
             flex: 0 0 auto;
             color: var(--tg-common-color-white);
-            background: #1BCBE3;
+            background: #63B32E;
             @include border-radius(50%);
             @include flexbox();
             align-items: center;
