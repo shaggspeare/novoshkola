@@ -21,8 +21,8 @@ const NMTSubjects = () => {
          name: "Історія України",
          icon: "flaticon-book",
          popular: true,
-         color: "#1BCBE3", // Green
-         borderColor: "#1BCBE3"
+         color: "#63B32E", // Green
+         borderColor: "#63B32E"
       },
 
       {
