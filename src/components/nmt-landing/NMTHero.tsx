@@ -43,10 +43,10 @@ const NMTHero = () => {
                <div className="col-lg-6">
                   <div className="banner__images" style={{ position: 'relative', minHeight: '400px' }}>
                      <img
-                        src="/assets/img/hero/banner_img.png"
+                        src="/assets/img/banner-students.png"
                         alt="Підготовка до НМТ"
                         className="main-img"
-                        style={{ display: 'block', maxWidth: '100%', height: 'auto' }}
+
                      />
 
                      <div className="shape big-shape" data-aos="fade-up-right" data-aos-delay="600">

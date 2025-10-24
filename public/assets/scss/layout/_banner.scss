@@ -775,24 +775,38 @@
             padding: 0;
         }
         @media #{$xs} {
+          display: none;
             max-width: 100%;
         }
         @media #{$sm} {
             max-width: 90%;
         }
         & .main-img {
-            max-width: inherit;
-            @media #{$xl} {
-                max-width: 100%;
-            }
+          position: absolute;
+          display: block;
+          top: -45px;
+          left: -170px;
+          width: 800px;
+          height: auto;
+          object-fit: cover;
+          border-radius: 12px;
+          max-width: inherit;
+
+          @media #{$xs} {
+            display: none;
+          }
         }
         & .shape {
             position: absolute;
             z-index: -1;
             &.big-shape {
                 max-width: 618px;
-                bottom: -85px;
+                bottom: -35px;
                 right: -22px;
+
+              @media #{$xs} {
+                display: none;
+              }
             }
             &.bg-dots {
                 max-width: 495px;
