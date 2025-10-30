@@ -78,9 +78,19 @@ const NMTMobileSidebar = ({ isActive, setIsActive, scrollToSection }: NMTMobileS
 
                <div className="tgmobile__menu-contact" style={{ marginTop: "30px", padding: "0 30px 20px" }}>
                   <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                     <li style={{ marginBottom: "8px" }}>
+                        <a href="tel:+380501939393" style={{ color: "#666", fontSize: "14px", display: "block" }}>
+                           +38 (050) 193-93-93
+                        </a>
+                     </li>
+                     <li style={{ marginBottom: "8px" }}>
+                        <a href="tel:+380681939333" style={{ color: "#666", fontSize: "14px", display: "block" }}>
+                           +38 (068) 193-93-33
+                        </a>
+                     </li>
                      <li style={{ marginBottom: "12px" }}>
-                        <a href="tel:+380123456789" style={{ color: "#666", fontSize: "14px", display: "block" }}>
-                           +380 (12) 345 67 89
+                        <a href="tel:+380443590750" style={{ color: "#666", fontSize: "14px", display: "block" }}>
+                           +38 (044) 359-07-50
                         </a>
                      </li>
                      <li>

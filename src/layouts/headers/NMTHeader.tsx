@@ -77,9 +77,15 @@ const NMTHeader = () => {
                               {/* Contact info */}
                               <div className="tgmenu__action d-none d-md-flex">
                                  <ul className="list-wrap" style={{ alignItems: "center" }}>
-                                    <li style={{ marginRight: "20px", fontSize: "14px" }}>
-                                       <i className="flaticon-phone-call" style={{ marginRight: "8px" }}></i>
-                                       <a href="tel:+380123456789" style={{ color: "inherit", fontSize: '16px' }}>+380 12 345 67 89</a>
+                                    <li style={{ marginRight: "20px", fontSize: "14px", display: "flex", flexDirection: "column", gap: "4px" }}>
+                                       <div style={{ display: "flex", alignItems: "center" }}>
+                                          <i className="flaticon-phone-call" style={{ marginRight: "8px" }}></i>
+                                          <a href="tel:+380501939393" style={{ color: "inherit", fontSize: '14px', whiteSpace: "nowrap" }}>+38 (050) 193-93-93</a>
+                                       </div>
+                                       <div style={{ display: "flex", alignItems: "center" }}>
+                                          <i className="flaticon-phone-call" style={{ marginRight: "8px", opacity: 0 }}></i>
+                                          <a href="tel:+380681939333" style={{ color: "inherit", fontSize: '14px', whiteSpace: "nowrap" }}>+38 (068) 193-93-33</a>
+                                       </div>
                                     </li>
                                     <li>
                                        <a  href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }} className="btn arrow-btn">

@@ -16,7 +16,9 @@ const NMTFooter = () => {
                            <p>Ефективна підготовка до НМТ з досвідченими викладачами</p>
                            <ul className="list-wrap">
                               <li>Україна, м. Київ</li>
-                              <li>+380 12 345 67 89</li>
+                              <li><a href="tel:+380501939393" style={{ color: "inherit" }}>+38 (050) 193-93-93</a></li>
+                              <li><a href="tel:+380681939333" style={{ color: "inherit" }}>+38 (068) 193-93-33</a></li>
+                              <li><a href="tel:+380443590750" style={{ color: "inherit" }}>+38 (044) 359-07-50</a></li>
                            </ul>
                         </div>
                      </div>
