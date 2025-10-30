@@ -31,7 +31,7 @@ const NMTHeader = () => {
                                        src="/assets/img/logo/logo-violet-long.png"
                                        alt="Новошкола"
                                        style={{
-                                          maxWidth: window.innerWidth < 768 ? "140px" : "200px",
+                                          maxWidth: window.innerWidth < 768 ? "150px" : "200px",
                                           maxHeight: window.innerWidth < 768 ? "70px" : "100px"
                                        }}
                                     />
@@ -39,10 +39,7 @@ const NMTHeader = () => {
                               </div>
 
                               {/* Desktop Menu */}
-                              <div style={{
-                                  position: "relative",
-                                  top: -5,
-                              }} className="tgmenu__navbar-wrap tgmenu__main-menu d-none d-xl-flex">
+                              <div  className="tgmenu__navbar-wrap tgmenu__main-menu d-none d-xl-flex">
                                  <ul className="navigation">
                                     <li>
                                        <a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>
@@ -78,10 +75,7 @@ const NMTHeader = () => {
                               </div>
 
                               {/* Contact info */}
-                              <div style={{
-                                  position: "relative",
-                                  top: -5,
-                              }} className="tgmenu__action d-none d-md-flex">
+                              <div className="tgmenu__action d-none d-md-flex">
                                  <ul className="list-wrap" style={{ alignItems: "center" }}>
                                     <li style={{ marginRight: "20px", fontSize: "14px" }}>
                                        <i className="flaticon-phone-call" style={{ marginRight: "8px" }}></i>

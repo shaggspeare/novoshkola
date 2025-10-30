@@ -144,14 +144,6 @@
         &.sticky-menu {
             padding: 0 0;
         }
-
-
-        & .logo-mobile {
-          @media #{$lg} {
-            position: relative;
-            top: 5px;
-          }
-        }
     }
     &__style {
         &-two {
