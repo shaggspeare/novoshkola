@@ -17,7 +17,7 @@ const nmt_instructor_data: NMTTeacherType[] = [
     name: "Руслан Назарінський",
     slug: "ruslan-nazarinskiy",
     subject: "Історія України",
-    image: "/assets/img/teachers/nazarinskiy.jpg",
+    image: "/assets/img/teachers/nazarinskiy-no-bg.png",
     experience: "10+ років підготовки до ЗНО/НМТ, 6 років викладання в школі (5-11 класи)",
     bio: "Закінчив Вінницький державний педагогічний університет ім. М. Коцюбинського (2015), завершив аспірантуру за спеціальністю історія України. Сертифікований вчитель історичної та громадянської галузі.",
     education: [
@@ -37,8 +37,8 @@ const nmt_instructor_data: NMTTeacherType[] = [
     id: 2,
     name: "Олеся Вовкотруб",
     slug: "olesya-vovkotrub",
-    subject: "Українська мова та література",
-    image: "/assets/img/teachers/vovkotrub.jpg",
+    subject: "Українська мова",
+    image: "/assets/img/teachers/vovkotrub-no-bg.png",
     experience: "21 рік викладання української мови та літератури",
     bio: "Випускниця Київського державного педагогічного університету ім. Павла Тичини (1996-2001). Вчитель української мови й літератури, народознавства та зарубіжної літератури. Диплом з відзнакою. Прагну розбудити в учнях живий інтерес до рідної мови, до гарного літературного слова.",
     education: [
@@ -67,9 +67,9 @@ const nmt_instructor_data: NMTTeacherType[] = [
     id: 3,
     name: "Юлія Чередніченко",
     slug: "yuliya-cherednichenko",
-    subject: "Англійська мова",
-    image: "/assets/img/teachers/cherednichenko.jpg",
-    experience: "Досвідчений викладач англійської мови",
+    subject: "Математика",
+    image: "/assets/img/teachers/cherednichenko-no-bg.png",
+    experience: "Досвідчений викладач математики",
     bio: "Використовую комплексний підхід до навчання: розбір теорії з прикладами, практичні вправи з поступовим ускладненням, регулярну перевірку домашнього завдання з розбором помилок та закріпленням знань. Важливим вважаю створення дружньої атмосфери, щоб учень не боявся помилятися, а мав бажання вчитися й рухатися вперед.",
     education: [],
     achievements: [

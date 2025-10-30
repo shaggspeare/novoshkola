@@ -64,7 +64,7 @@ const nmt_feature_data: NMTFeatureType[] = [
       page: "nmt",
       icon: "/assets/img/icons/features_icon01.svg",
       title: "Живі онлайн-уроки",
-      desc: "Спілкування в Zoom у реальному часі з можливістю отримати запис уроку"
+      desc: "Спілкування в Zoom у реальному часі"
    },
    // {
    //    id: 9,

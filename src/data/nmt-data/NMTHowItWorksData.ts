@@ -43,7 +43,7 @@ const nmt_how_it_works_data: NMTStepType[] = [
       id: 6,
       step: 6,
       title: "Результат на тесті",
-      description: "Впевнено здаєте НМТ та отримуєте високий бал для вступу до обраного університету"
+      description: "Впевнено здаєте НМТ"
    }
 ];
 

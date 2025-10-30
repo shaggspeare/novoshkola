@@ -10,7 +10,7 @@ const NMTFooter = () => {
                   <div className="col-xl-3 col-lg-4 col-md-6">
                      <div className="footer__widget">
                         <div className="logo mb-35">
-                           <Link to="/"><img src="/assets/img/logo/logo-yellow.png" alt="Новошкола" style={{ maxWidth: "150px", maxHeight: "150px" }} /></Link>
+                           <Link to="/"><img src="/assets/img/logo/logo-violet-long.png" alt="Новошкола" style={{ maxWidth: "250px", maxHeight: "150px" }} /></Link>
                         </div>
                         <div className="footer__content">
                            <p>Ефективна підготовка до НМТ з досвідченими викладачами</p>

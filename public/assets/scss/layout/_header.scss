@@ -121,11 +121,14 @@
     }
     &__area {
         padding: 5px 0;
+        max-height: 90px;
         @media #{$xl} {
             padding: 10px 0;
+          max-height: 90px;
         }
         @media #{$lg} {
-            padding: 20px 0;
+          padding: 0;
+          max-height: 70px;
         }
         & .mobile-nav-toggler {
             position: relative;
@@ -140,7 +143,14 @@
         }
         &.sticky-menu {
             padding: 0 0;
+        }
 
+
+        & .logo-mobile {
+          @media #{$lg} {
+            position: relative;
+            top: 5px;
+          }
         }
     }
     &__style {

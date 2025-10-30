@@ -23,24 +23,26 @@ const NMTHeader = () => {
                   <div className="row">
                      <div className="col-12">
                         <div className="tgmenu__wrap">
-                           <nav className="tgmenu__nav" style={{
-                              padding: window.innerWidth < 768 ? '10px 0' : undefined
-                           }}>
+                           <nav className="tgmenu__nav">
                               <div className="logo">
                                  <Link to="/">
                                     <img
-                                       src="/assets/img/logo/logo-violet.png"
+                                        className="logo-mobile"
+                                       src="/assets/img/logo/logo-violet-long.png"
                                        alt="Новошкола"
                                        style={{
-                                          maxWidth: window.innerWidth < 768 ? "120px" : "150px",
-                                          maxHeight: window.innerWidth < 768 ? "40px" : "60px"
+                                          maxWidth: window.innerWidth < 768 ? "140px" : "200px",
+                                          maxHeight: window.innerWidth < 768 ? "70px" : "100px"
                                        }}
                                     />
                                  </Link>
                               </div>
 
                               {/* Desktop Menu */}
-                              <div className="tgmenu__navbar-wrap tgmenu__main-menu d-none d-xl-flex">
+                              <div style={{
+                                  position: "relative",
+                                  top: -5,
+                              }} className="tgmenu__navbar-wrap tgmenu__main-menu d-none d-xl-flex">
                                  <ul className="navigation">
                                     <li>
                                        <a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>
@@ -76,14 +78,17 @@ const NMTHeader = () => {
                               </div>
 
                               {/* Contact info */}
-                              <div className="tgmenu__action d-none d-md-flex">
+                              <div style={{
+                                  position: "relative",
+                                  top: -5,
+                              }} className="tgmenu__action d-none d-md-flex">
                                  <ul className="list-wrap" style={{ alignItems: "center" }}>
                                     <li style={{ marginRight: "20px", fontSize: "14px" }}>
                                        <i className="flaticon-phone-call" style={{ marginRight: "8px" }}></i>
                                        <a href="tel:+380123456789" style={{ color: "inherit", fontSize: '16px' }}>+380 12 345 67 89</a>
                                     </li>
                                     <li>
-                                       <a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }} className="btn arrow-btn">
+                                       <a  href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }} className="btn arrow-btn">
                                           Записатися
                                        </a>
                                     </li>

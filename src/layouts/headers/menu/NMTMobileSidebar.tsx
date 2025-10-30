@@ -18,7 +18,7 @@ const NMTMobileSidebar = ({ isActive, setIsActive, scrollToSection }: NMTMobileS
             <nav className="tgmobile__menu-box">
                <div onClick={() => setIsActive(false)} className="close-btn"><i className="tg-flaticon-close-1"></i></div>
                <div className="nav-logo">
-                  <Link to="/nmt"><img src="/assets/img/logo/logo-violet.png" alt="Новошкола" style={{ maxWidth: "70px" }} /></Link>
+                  <Link to="/nmt"><img src="/assets/img/logo/logo-violet-long.png" alt="Новошкола" style={{ maxWidth: "150px" }} /></Link>
                </div>
 
                <div className="tgmobile__menu-outer">
@@ -66,7 +66,8 @@ const NMTMobileSidebar = ({ isActive, setIsActive, scrollToSection }: NMTMobileS
                            style={{
                               display: "block",
                               marginLeft: "15px",
-                              marginRight: "15px"
+                              marginRight: "15px",
+                               color: 'white'
                            }}
                         >
                            Записатися
