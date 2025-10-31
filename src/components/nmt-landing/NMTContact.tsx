@@ -3,6 +3,8 @@ import { toast } from "react-toastify";
 import InjectableSvg from "../../hooks/InjectableSvg";
 
 const GOOGLE_SCRIPT_URL = import.meta.env.VITE_GOOGLE_SCRIPT_URL;
+const TELEGRAM_BOT_TOKEN = import.meta.env.VITE_TELEGRAM_BOT_TOKEN;
+const TELEGRAM_CHAT_IDS = import.meta.env.VITE_TELEGRAM_CHAT_IDS;
 
 interface ContactFormData {
    name: string;
@@ -12,6 +14,67 @@ interface ContactFormData {
    format: string;
    message: string;
 }
+
+// Функція для відправки повідомлення в Telegram
+const sendTelegramNotification = async (data: ContactFormData) => {
+   if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_CHAT_IDS) {
+      console.warn('Telegram credentials not configured');
+      return;
+   }
+
+   const chatIds = TELEGRAM_CHAT_IDS.split(',').map(id => id.trim());
+   const timestamp = new Date().toLocaleString('uk-UA', {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit'
+   });
+
+   const message = `🎓 *Нова заявка з NMT Landing!*
+
+📅 *Дата:* ${timestamp}
+
+👤 *Ім'я:* ${data.name}
+📞 *Телефон:* ${data.phone}
+📧 *Email:* ${data.email}
+📚 *Програма:* ${data.program}
+👥 *Формат:* ${data.format}
+💬 *Коментар:* ${data.message || 'Немає'}
+
+[Переглянути в таблиці](https://docs.google.com/spreadsheets/d/1IQhlPC91lQA0cL_UoX0kghWk6Qy3-Jpi7XnoADL9OYM/edit)`;
+
+   const telegramUrl = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+
+   // Відправляємо повідомлення на всі chat IDs
+   const promises = chatIds.map(chatId =>
+      fetch(telegramUrl, {
+         method: 'POST',
+         headers: {
+            'Content-Type': 'application/json',
+         },
+         body: JSON.stringify({
+            chat_id: chatId,
+            text: message,
+            parse_mode: 'Markdown',
+         }),
+      })
+      .then(response => response.json())
+      .then(result => {
+         if (result.ok) {
+            console.log(`Telegram notification sent to ${chatId}`);
+         } else {
+            console.error(`Failed to send to ${chatId}:`, result);
+         }
+      })
+      .catch(error => {
+         console.error(`Error sending to ${chatId}:`, error);
+      })
+   );
+
+   await Promise.allSettled(promises);
+};
 
 const NMTContact = () => {
    const [isSubmitting, setIsSubmitting] = useState(false);
@@ -58,6 +121,7 @@ const NMTContact = () => {
       setIsSubmitting(true);
 
       try {
+         // Відправляємо дані в Google Sheets
          await fetch(GOOGLE_SCRIPT_URL, {
             method: 'POST',
             mode: 'no-cors',
@@ -65,6 +129,11 @@ const NMTContact = () => {
                'Content-Type': 'application/json',
             },
             body: JSON.stringify(data),
+         });
+
+         // Відправляємо сповіщення в Telegram (паралельно, не блокуючи)
+         sendTelegramNotification(data).catch(err => {
+            console.error('Telegram notification failed:', err);
          });
 
          toast.success("Дякуємо! Ваша заявка успішно відправлена. Ми зв'яжемося з вами найближчим часом!");
