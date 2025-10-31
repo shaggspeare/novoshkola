@@ -1,6 +1,64 @@
+import { useState, FormEvent } from "react";
+import { toast } from "react-toastify";
 import InjectableSvg from "../../hooks/InjectableSvg";
 
+const GOOGLE_SCRIPT_URL = import.meta.env.VITE_GOOGLE_SCRIPT_URL;
+
+interface ContactFormData {
+   name: string;
+   phone: string;
+   email: string;
+   program: string;
+   format: string;
+   message: string;
+}
+
 const NMTContact = () => {
+   const [isSubmitting, setIsSubmitting] = useState(false);
+
+   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+
+      const form = e.currentTarget;
+      const formData = new FormData(form);
+
+      const data: ContactFormData = {
+         name: formData.get('name') as string,
+         phone: formData.get('phone') as string,
+         email: formData.get('email') as string,
+         program: formData.get('program') as string,
+         format: formData.get('format') as string,
+         message: formData.get('message') as string,
+      };
+
+      if (!data.name || !data.phone || !data.email) {
+         toast.error("Будь ласка, заповніть всі обов'язкові поля");
+         return;
+      }
+
+      setIsSubmitting(true);
+
+      try {
+         await fetch(GOOGLE_SCRIPT_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+               'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+         });
+
+         toast.success("Дякуємо! Ваша заявка успішно відправлена. Ми зв'яжемося з вами найближчим часом!");
+         form.reset();
+
+      } catch (error) {
+         console.error('Error submitting form:', error);
+         toast.error("Виникла помилка при відправці форми. Будь ласка, спробуйте ще раз або зв'яжіться з нами по телефону.");
+      } finally {
+         setIsSubmitting(false);
+      }
+   };
+
    return (
       <section className="contact-area section-py-120" id="contact">
          <div className="container">
@@ -19,26 +77,44 @@ const NMTContact = () => {
                   <div className="contact-form-wrap" id="contact-form">
                      <h4 className="title">Записатися на безкоштовний урок</h4>
                      <p>Заповніть форму, і наш менеджер зв'яжеться з вами протягом 15 хвилин</p>
-                     <form id="nmt-contact-form">
+                     <form id="nmt-contact-form" onSubmit={handleSubmit}>
                         <div className="row">
                            <div className="col-md-6">
                               <div className="form-grp">
-                                 <input type="text" name="name" placeholder="Ваше ім'я *" required />
+                                 <input
+                                    type="text"
+                                    name="name"
+                                    placeholder="Ваше ім'я *"
+                                    required
+                                    disabled={isSubmitting}
+                                 />
                               </div>
                            </div>
                            <div className="col-md-6">
                               <div className="form-grp">
-                                 <input type="tel" name="phone" placeholder="Телефон *" required />
+                                 <input
+                                    type="tel"
+                                    name="phone"
+                                    placeholder="Телефон *"
+                                    required
+                                    disabled={isSubmitting}
+                                 />
                               </div>
                            </div>
                            <div className="col-md-12">
                               <div className="form-grp">
-                                 <input type="email" name="email" placeholder="Email *" required />
+                                 <input
+                                    type="email"
+                                    name="email"
+                                    placeholder="Email *"
+                                    required
+                                    disabled={isSubmitting}
+                                 />
                               </div>
                            </div>
                            <div className="col-md-6">
                               <div className="form-grp">
-                                 <select name="program" className="form-select">
+                                 <select name="program" className="form-select" disabled={isSubmitting}>
                                     <option value="">Оберіть програму</option>
                                     <option value="standard">НМТ Стандарт (9 місяців)</option>
                                     <option value="accelerated">НМТ Прискорений (6 місяців)</option>
@@ -51,7 +127,7 @@ const NMTContact = () => {
                            </div>
                            <div className="col-md-6">
                               <div className="form-grp">
-                                 <select name="format" className="form-select">
+                                 <select name="format" className="form-select" disabled={isSubmitting}>
                                     <option value="">Оберіть формат навчання</option>
                                     <option value="group">Група (до 5 учнів)</option>
                                     <option value="individual">Індивідуально (1-на-1)</option>
@@ -61,16 +137,20 @@ const NMTContact = () => {
                            </div>
                            <div className="col-md-12">
                               <div className="form-grp">
-                                 <textarea name="message" placeholder="Коментар (необов'язково)" rows={3}></textarea>
+                                 <textarea
+                                    name="message"
+                                    placeholder="Коментар (необов'язково)"
+                                    rows={3}
+                                    disabled={isSubmitting}
+                                 ></textarea>
                               </div>
                            </div>
                         </div>
-                        <button type="submit" className="btn btn-two arrow-btn">
-                           Відправити заявку
+                        <button type="submit" className="btn btn-two arrow-btn" disabled={isSubmitting}>
+                           {isSubmitting ? 'Відправляємо...' : 'Відправити заявку'}
                            <i className="flaticon-arrow-right"></i>
                         </button>
                      </form>
-                     <p className="ajax-response mb-0"></p>
                   </div>
                </div>
 
