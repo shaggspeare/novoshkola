@@ -15,6 +15,34 @@ interface ContactFormData {
    message: string;
 }
 
+// Валідація українського номера телефону
+const validateUkrainianPhone = (phone: string): boolean => {
+   if (!phone) return false;
+
+   // Видаляємо всі пробіли, дефіси, дужки
+   const cleaned = phone.replace(/[\s\-()]/g, '');
+
+   // Перевіряємо формати:
+   // +380XXXXXXXXX (12 символів з +)
+   // 380XXXXXXXXX (11 символів без +)
+   // 0XXXXXXXXX (10 символів, починається з 0)
+   const patterns = [
+      /^\+380\d{9}$/,  // +380501234567
+      /^380\d{9}$/,     // 380501234567
+      /^0\d{9}$/        // 0501234567
+   ];
+
+   return patterns.some(pattern => pattern.test(cleaned));
+};
+
+// Валідація email
+const validateEmail = (email: string): boolean => {
+   if (!email) return false;
+
+   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+   return emailPattern.test(email);
+};
+
 // Функція для відправки повідомлення в Telegram
 const sendTelegramNotification = async (data: ContactFormData) => {
    if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_CHAT_IDS) {
@@ -113,8 +141,30 @@ const NMTContact = () => {
          message: formData.get('message') as string,
       };
 
-      if (!data.name || !data.phone || !data.email) {
-         toast.error("Будь ласка, заповніть всі обов'язкові поля");
+      // Валідація: ім'я обов'язкове
+      if (!data.name || data.name.trim().length === 0) {
+         toast.error("Будь ласка, вкажіть ваше ім'я");
+         return;
+      }
+
+      // Валідація: хоча б телефон або email
+      const hasValidPhone = validateUkrainianPhone(data.phone);
+      const hasValidEmail = validateEmail(data.email);
+
+      if (!hasValidPhone && !hasValidEmail) {
+         toast.error("Будь ласка, вкажіть коректний номер телефону або email");
+         return;
+      }
+
+      // Якщо телефон вказано, але він некоректний
+      if (data.phone && !hasValidPhone) {
+         toast.error("Некоректний формат номера телефону. Приклад: +380501234567 або 0501234567");
+         return;
+      }
+
+      // Якщо email вказано, але він некоректний
+      if (data.email && !hasValidEmail) {
+         toast.error("Некоректний формат email");
          return;
       }
 
@@ -183,8 +233,7 @@ const NMTContact = () => {
                                  <input
                                     type="tel"
                                     name="phone"
-                                    placeholder="Телефон *"
-                                    required
+                                    placeholder="Телефон (напр. +380501234567)"
                                     disabled={isSubmitting}
                                  />
                               </div>
@@ -194,11 +243,15 @@ const NMTContact = () => {
                                  <input
                                     type="email"
                                     name="email"
-                                    placeholder="Email *"
-                                    required
+                                    placeholder="Email"
                                     disabled={isSubmitting}
                                  />
                               </div>
+                           </div>
+                           <div className="col-md-12">
+                              <p style={{ fontSize: "14px", color: "#666", marginTop: "-10px", marginBottom: "15px" }}>
+                                 * Вкажіть телефон або email (або обидва)
+                              </p>
                            </div>
                            <div className="col-md-6">
                               <div className="form-grp">
