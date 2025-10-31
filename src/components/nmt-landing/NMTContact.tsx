@@ -16,18 +16,37 @@ interface ContactFormData {
 const NMTContact = () => {
    const [isSubmitting, setIsSubmitting] = useState(false);
 
+   // Маппінг значень на українську мову
+   const programMap: Record<string, string> = {
+      'standard': 'НМТ Стандарт (9 місяців)',
+      'accelerated': 'НМТ Прискорений (6 місяців)',
+      'express': 'НМТ Експрес (3 місяці)',
+      'personal': 'Персональна програма',
+      'annual': 'Річна програма для 10 класу',
+      'undecided': 'Ще не визначився(-лась)',
+   };
+
+   const formatMap: Record<string, string> = {
+      'group': 'Група (до 5 учнів)',
+      'individual': 'Індивідуально (1-на-1)',
+      'undecided': 'Не визначився(-лась)',
+   };
+
    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault();
 
       const form = e.currentTarget;
       const formData = new FormData(form);
 
+      const programValue = formData.get('program') as string;
+      const formatValue = formData.get('format') as string;
+
       const data: ContactFormData = {
          name: formData.get('name') as string,
          phone: formData.get('phone') as string,
          email: formData.get('email') as string,
-         program: formData.get('program') as string,
-         format: formData.get('format') as string,
+         program: programMap[programValue] || programValue || 'Не вибрано',
+         format: formatMap[formatValue] || formatValue || 'Не вибрано',
          message: formData.get('message') as string,
       };
 
