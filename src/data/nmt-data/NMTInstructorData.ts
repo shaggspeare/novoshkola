@@ -1,6 +1,7 @@
 export interface NMTTeacherType {
   id: number;
   name: string;
+  nameInstrumental: string; // Ім'я в орудному відмінку для фрази "з [ім'ям]"
   slug: string;
   subject: string;
   image: string;
@@ -15,6 +16,7 @@ const nmt_instructor_data: NMTTeacherType[] = [
   {
     id: 1,
     name: "Руслан Назарінський",
+    nameInstrumental: "Русланом",
     slug: "ruslan-nazarinskiy",
     subject: "Історія України",
     image: "/assets/img/teachers/nazarinskiy-no-bg.png",
@@ -36,6 +38,7 @@ const nmt_instructor_data: NMTTeacherType[] = [
   {
     id: 2,
     name: "Олеся Вовкотруб",
+    nameInstrumental: "Олесею",
     slug: "olesya-vovkotrub",
     subject: "Українська мова",
     image: "/assets/img/teachers/vovkotrub-no-bg.png",
@@ -66,6 +69,7 @@ const nmt_instructor_data: NMTTeacherType[] = [
   {
     id: 3,
     name: "Юлія Чередніченко",
+    nameInstrumental: "Юлією",
     slug: "yuliya-cherednichenko",
     subject: "Математика",
     image: "/assets/img/teachers/cherednichenko-no-bg.png",

@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import NMTHeader from "../layouts/headers/NMTHeader";
 import NMTFooter from "../layouts/footers/NMTFooter";
 import {
@@ -18,6 +20,23 @@ import SEO from "../components/SEO";
 import StructuredData from "../components/StructuredData";
 
 const NMTLanding = () => {
+   const location = useLocation();
+
+   // Handle scrolling when navigating from teacher page with scroll state
+   useEffect(() => {
+      const state = location.state as { scrollTo?: string } | null;
+      if (state?.scrollTo) {
+         const sectionId = state.scrollTo;
+         // Wait for the page to render, then scroll
+         const timer = setTimeout(() => {
+            const element = document.getElementById(sectionId);
+            if (element) {
+               element.scrollIntoView({ behavior: 'instant' });
+            }
+         }, 100);
+         return () => clearTimeout(timer);
+      }
+   }, [location]);
    const structuredData = {
       "@context": "https://schema.org",
       "@type": "EducationalOrganization",

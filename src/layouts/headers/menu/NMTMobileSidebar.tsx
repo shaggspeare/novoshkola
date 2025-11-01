@@ -18,49 +18,44 @@ const NMTMobileSidebar = ({ isActive, setIsActive, scrollToSection }: NMTMobileS
             <nav className="tgmobile__menu-box">
                <div onClick={() => setIsActive(false)} className="close-btn"><i className="tg-flaticon-close-1"></i></div>
                <div className="nav-logo">
-                  <Link to="/nmt"><img src="/assets/img/logo/logo-violet-long.png" alt="Новошкола" style={{ maxWidth: "150px" }} /></Link>
+                  <Link to="/"><img src="/assets/img/logo/logo-violet-long.png" alt="Новошкола" style={{ maxWidth: "150px" }} /></Link>
                </div>
 
                <div className="tgmobile__menu-outer">
                   <ul className="navigation">
                      <li>
-                        <a href="#about" onClick={(e) => { e.preventDefault(); handleNavClick('about'); }}>
+                        <a href="/#about" onClick={(e) => { e.preventDefault(); handleNavClick('about'); }}>
                            Про курс
                         </a>
                      </li>
                      <li>
-                        <a href="#program" onClick={(e) => { e.preventDefault(); handleNavClick('program'); }}>
+                        <a href="/#program" onClick={(e) => { e.preventDefault(); handleNavClick('program'); }}>
                            Програма
                         </a>
                      </li>
                      <li>
-                        <a href="#how-it-works" onClick={(e) => { e.preventDefault(); handleNavClick('how-it-works'); }}>
-                           Як це працює
-                        </a>
-                     </li>
-                     <li>
-                        <a href="#teachers" onClick={(e) => { e.preventDefault(); handleNavClick('teachers'); }}>
+                        <a href="/#teachers" onClick={(e) => { e.preventDefault(); handleNavClick('teachers'); }}>
                            Викладачі
                         </a>
                      </li>
                      <li>
-                        <a href="#prices" onClick={(e) => { e.preventDefault(); handleNavClick('prices'); }}>
+                        <a href="/#prices" onClick={(e) => { e.preventDefault(); handleNavClick('prices'); }}>
                            Ціни
                         </a>
                      </li>
                      <li>
-                        <a href="#reviews" onClick={(e) => { e.preventDefault(); handleNavClick('reviews'); }}>
+                        <a href="/#reviews" onClick={(e) => { e.preventDefault(); handleNavClick('reviews'); }}>
                            Відгуки
                         </a>
                      </li>
                      <li>
-                        <a href="#faq" onClick={(e) => { e.preventDefault(); handleNavClick('faq'); }}>
+                        <a href="/#faq" onClick={(e) => { e.preventDefault(); handleNavClick('faq'); }}>
                            FAQ
                         </a>
                      </li>
                      <li style={{ paddingTop: "10px" }}>
                         <a
-                           href="#contact"
+                           href="/#contact"
                            onClick={(e) => { e.preventDefault(); handleNavClick('contact'); }}
                            className="btn"
                            style={{

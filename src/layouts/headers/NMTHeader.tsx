@@ -1,16 +1,27 @@
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useLocation, useNavigate } from "react-router-dom"
 import UseSticky from "../../hooks/UseSticky"
 import NMTMobileSidebar from "./menu/NMTMobileSidebar"
 
 const NMTHeader = () => {
    const { sticky } = UseSticky();
    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
+   const location = useLocation();
+   const navigate = useNavigate();
 
    const scrollToSection = (sectionId: string) => {
-      const element = document.getElementById(sectionId);
-      if (element) {
-         element.scrollIntoView({ behavior: 'smooth' });
+      // Check if we're on a teacher details page
+      const isTeacherPage = location.pathname.startsWith('/teachers/');
+
+      if (isTeacherPage) {
+         // Navigate to home and pass the section ID to scroll to
+         navigate('/', { state: { scrollTo: sectionId } });
+      } else {
+         // Already on home page, just scroll
+         const element = document.getElementById(sectionId);
+         if (element) {
+            element.scrollIntoView({ behavior: 'instant' });
+         }
       }
    };
 
@@ -42,32 +53,32 @@ const NMTHeader = () => {
                               <div  className="tgmenu__navbar-wrap tgmenu__main-menu d-none d-xl-flex">
                                  <ul className="navigation">
                                     <li>
-                                       <a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>
+                                       <a href="/#about" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>
                                           Про курс
                                        </a>
                                     </li>
                                     <li>
-                                       <a href="#program" onClick={(e) => { e.preventDefault(); scrollToSection('program'); }}>
+                                       <a href="/#program" onClick={(e) => { e.preventDefault(); scrollToSection('program'); }}>
                                           Програма
                                        </a>
                                     </li>
                                     <li>
-                                       <a href="#teachers" onClick={(e) => { e.preventDefault(); scrollToSection('teachers'); }}>
+                                       <a href="/#teachers" onClick={(e) => { e.preventDefault(); scrollToSection('teachers'); }}>
                                           Викладачі
                                        </a>
                                     </li>
                                     <li>
-                                       <a href="#prices" onClick={(e) => { e.preventDefault(); scrollToSection('prices'); }}>
+                                       <a href="/#prices" onClick={(e) => { e.preventDefault(); scrollToSection('prices'); }}>
                                           Ціни
                                        </a>
                                     </li>
                                     <li>
-                                       <a href="#reviews" onClick={(e) => { e.preventDefault(); scrollToSection('reviews'); }}>
+                                       <a href="/#reviews" onClick={(e) => { e.preventDefault(); scrollToSection('reviews'); }}>
                                           Відгуки
                                        </a>
                                     </li>
                                     <li>
-                                       <a href="#faq" onClick={(e) => { e.preventDefault(); scrollToSection('faq'); }}>
+                                       <a href="/#faq" onClick={(e) => { e.preventDefault(); scrollToSection('faq'); }}>
                                           FAQ
                                        </a>
                                     </li>
@@ -88,7 +99,7 @@ const NMTHeader = () => {
                                        </div>
                                     </li>
                                     <li>
-                                       <a  href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }} className="btn arrow-btn">
+                                       <a  href="/#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }} className="btn arrow-btn">
                                           Записатися
                                        </a>
                                     </li>

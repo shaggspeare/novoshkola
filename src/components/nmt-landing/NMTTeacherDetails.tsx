@@ -140,7 +140,7 @@ const NMTTeacherDetails = () => {
                     border: "2px solid #ffc224",
                     textAlign: "center"
                   }}>
-                    <h4 className="mb-20">Готові розпочати навчання з {teacher.name.split(' ')[0]}?</h4>
+                    <h4 className="mb-20">Готові розпочати навчання з {teacher.nameInstrumental}?</h4>
                     <p className="mb-25">Запишіться на безкоштовний пробний урок вже сьогодні!</p>
                     <div className="tg-button-wrap" style={{
                       justifyContent: "center",
